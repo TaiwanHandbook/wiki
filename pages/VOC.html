@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Dutch East India Company</title>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="../css/img-map.css">
+        <link rel="stylesheet" href="../css/progress.css">
+        <link rel="stylesheet" href="../css/search1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            var images = ["voc.jpg"] //MAKE LIST OF IMAGE NAMES HERE//
+            var credits = ["Abraham Storck: The frigate Pieter and Paul on the IJ., Wikimedia Commons"] //MAKE LIST OF IMAGE CAPTIONS HERE//
+            var map = false //TOGGLE//
+        </script>
+        <script src="../js/image.js"></script>
+    </head>
+    
+    <body>
+        <div id="homeFlex">
+            <div id="homeFlex1">
+                <a href="../index.html"><img src="images/home.png" id="homeImg"></a>
+                <a id="homeLink" href="../index.html">Home</a>
+                <a id="homeLink" href="../about.html">About</a>
+                <a id="homeLink" href="../all.html">Glossary</a>
+                <a id="homeLink" href="../bibliography.html">Bibliography</a>
+                <a id="homeLink" href="../feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="../help.html">Help</a>
+                <a id="homeLinkPath" href="../redirect2.html" style="display: none;">Back to Guide Path</a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="../redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
+                </div>
+                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="../js/searchbar.js"></script>
+        </div>
+        <div id="infodiv">
+            <div id="FlexCont">
+                <div id="FlexImage" style="background-image: url(images/voc.jpg);">
+                    <span id="caption">Abraham Storck: The frigate Pieter and Paul on the IJ., Wikimedia Commons</span>
+                </div>
+                <div id="FlexText">
+                    <div id="FlexContText">
+                        <h1 style="font-size: 2vw ;">Dutch East India Company</h1>
+                        <p>The <b>Dutch East India Company</b>, or <b>VOC</b>, was a Dutch charter company established in 1602 with the purpose of facilitating trade with and colonising South and East Asia.</p>
+                        <p>They first established a settlement on Taiwan near present-day <a href="Tainan.html">Tainan</a> in 1623. Bar the 16 year period from the 1626 establishment of the Spanish Fort San Salvador at <a href="Keelung.html">Keelung</a> to its conquering by the joint forces of the VOC and <a href="Taiwanese_indigenous_peoples.html">indigenous tribes</a>, they remained the sole hegemons of the island until the 1661 siege of Fort Zeelandia by the fleet of <a href="Zheng_Chenggong.html">Zheng Chenggong</a></p>
+                        <p>Besides operating harbors, they traded for deer meat and hyde with the Austronesians and for sugarcane and rice farmed by settlers from China. They utilized divide and conquer strategies to incite ethnic conflict between the Hokkien-speaking Chinese settlers from the Zhangzhou and Quanzhou regions, Hakka-speaking Chinese, many of whom were deported from southern China and the natives.</p>
+                        <p>Under their rule, settlements populated by Chinese farmers and fishermen became increasingly common. While they maintained ownership of the land, they allowed the farmers considerable autonomy.</p>
+                        <p>They were eventually defeated in 1661 by the fleet of <a href="Zheng_Chenggong.html">Zheng Chenggong</a>, which forced them to abandon the island. They reesatblished a foothold in the north at Keelung in 1664 but lost it in 1668.</p>
+                        <br><br><hr>
+                        <!--<h2 style="font-size: 1.7vw ;">Related links</h2>
+                        <ul>
+                            <li><a href="../pages/Chiang_Kai-shek.html">Chiang Kai-shek</a></li>
+                        </ul>
+                        <br><br><hr>-->
+                        <h2 style="font-size: 1.7vw ;">References</h2>
+                        <ol style="font-size: 1.1vw;">
+                            <li id="1">Encyclopaedia Britannica (2022). Dutch East India Company | Dutch trading company. In: <i>Encyclopædia Britannica</i>. [online] Available at: https://www.britannica.com/topic/Dutch-East-India-Company [Accessed 23 Oct. 2022].</li>
+                            <li id="2">Rubinstein, M.A. (2015). Taiwan: a new history. Milton Park, Abingdon, Oxon: Routledge.</li>
+                            <li id="3">Rigger, S. (2014). <i>Why Taiwan matters: small island, global powerhouse.</i> Lanham: Rowman & Littlefield, pp.19-52</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="progressFlex" style="display: none;">
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="prevPage()">◄</button>
+            <div id="progressbar"><div id="progress"><span id="progressSpan">42 / 100</span></div></div>
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="nextPage()">►</button>
+        </div>
+        <script src="../js/progress.js"></script>
+		<script src="../js/keys.js"></script>
+    </body>
+
+</html>

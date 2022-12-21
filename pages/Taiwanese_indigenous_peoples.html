@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Taiwanese indigenous peoples</title>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="../css/img-map.css">
+        <link rel="stylesheet" href="../css/progress.css">
+        <link rel="stylesheet" href="../css/search1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            var images = ["amis.jpg","indigenous.jpg"] //MAKE LIST OF IMAGE NAMES HERE//
+            var credits = ["Indigenous dancers at Amis Music Festival, 2016, Wikimedia Commons","Distribution of Formosan languages before Chinese colonisation, Blust (1999), Wikimedia Commons"] //MAKE LIST OF IMAGE CAPTIONS HERE//
+            var map = false
+        </script>
+        <script src="../js/image.js"></script>
+    </head>
+    
+    <body>
+        <div id="homeFlex">
+            <div id="homeFlex1">
+                <a href="../index.html"><img src="images/home.png" id="homeImg"></a>
+                <a id="homeLink" href="../index.html">Home</a>
+                <a id="homeLink" href="../about.html">About</a>
+                <a id="homeLink" href="../all.html">Glossary</a>
+                <a id="homeLink" href="../bibliography.html">Bibliography</a>
+                <a id="homeLink" href="../feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="../help.html">Help</a>
+                <a id="homeLinkPath" href="../redirect2.html" style="display: none;">Back to Guide Path</a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="../redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
+                </div>
+                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="../js/searchbar.js"></script>
+        </div>
+        <div id="infodiv">
+            <div id="FlexCont">
+                <div id="FlexImage" style="background-image: url(images/amis.jpg);">
+                    <span id="caption">Indigenous dancers at Amis Music Festival, 2016, Wikimedia Commons</span>
+                </div>
+                <div id="FlexText">
+                    <div id="FlexContText">
+                        <h1 style="font-size: 2vw ;">Taiwanese indigenous peoples</h1>
+                        <p>The <b>indigenous peoples of Taiwan</b> are Austronesian peoples whose ancestors have inhabited the island for approximately 4000 years.<sup><a href="#1">1</a></sup> According to census data, they constitute 2.48% of Taiwan's popuation.<sup><a href="#2">2</a></sup> The <a href="ROC.html">Taiwanese government</a> officially recognises 16 indigenous groups and tribes, which are, in descending order by their population sizes: Amis, Paiwan, Atayal, Bunun, Taroko, Puyuma, Rukai, Seediq, Tsou, Saisiyat, Yami, Kavalan, Sakizaya, Thao, Kanakanavu and Saaroa.<sup><a href="#3">3</a></sup></p>
+                        <p>/// most in western plains assimilated; social status, discrimination, KMT support ///</p>
+                        <br><br><hr>
+                        <!--<h2 style="font-size: 1.7vw ;">Related links</h2>
+                        <ul>
+                            <li><a href="../pages/Chiang_Kai-shek.html">Chiang Kai-shek</a></li>
+                        </ul>
+                        <br><br><hr>-->
+                        <h2 style="font-size: 1.7vw ;">References</h2>
+                        <ol style="font-size: 1.1vw;">
+                            <li id="1">/// theyve been here for 4000 years <a href=""></a></li>
+                            <li id="1">2.5% <a href=""></a></li>
+                            <li id="3">Council of Indigenous Peoples (2016). Aboriginal Population Statistics. [online] Council of Indigenous Peoples. Available at: <a href="https://web.archive.org/web/20160413145601/http://www.apc.gov.tw/portal/docList.html?CID=940F9579765AC6A0">https://web.archive.org/web/20160413145601/http://www.apc.gov.tw/portal/docList.html?CID=940F9579765AC6A0</a> [Accessed 12 Apr. 2016]. </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="progressFlex" style="display: none;">
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="prevPage()">◄</button>
+            <div id="progressbar"><div id="progress"><span id="progressSpan">42 / 100</span></div></div>
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="nextPage()">►</button>
+        </div>
+        <script src="../js/progress.js"></script>
+		<script src="../js/keys.js"></script>
+    </body>
+
+</html>

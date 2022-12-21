@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Help</title>
+        <link rel="icon" href="pages/images/icon.png">
+        <link rel="stylesheet" href="css/search1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                overflow-y: scroll;
+            }
+            #helprow{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                width: 100%;
+                padding: 3vw;
+            }
+            #helpcol{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                height: 100%;
+
+            }
+            #helpimg{
+                width: 40vw;
+                height: auto;
+            }
+            #helptext{
+                width: 40vw;
+                font-size: 1.5vw;
+                height: 10vw;
+                font-family: Georgia;
+                text-align: justify;
+            }
+        </style>
+    </head>
+    
+    <body style="font-family: Georgia;">
+        <div id="homeFlex" style="position:sticky; top: 0px;">
+            <div id="homeFlex1">
+                <a href="index.html"><img src="pages/images/home.png" id="homeImg"></a>
+                <a id="homeLink" href="index.html">Home</a>
+                <a id="homeLink" href="about.html">About</a>
+                <a id="homeLink" href="all.html">Glossary</a>
+                <a id="homeLink" href="bibliography.html">Bibliography</a>
+                <a id="homeLink" href="feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="help.html">Help</a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name...">
+                </div>
+                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="js/searchbar.js"></script>
+        </div>
+        <div>
+            <h1 style="font-size: 1.3vw; font-family: Georgia; padding: 3vh">This page illustrates how to navigate the site. Check the <a href="about.html">About</a> page for further information.</h1>
+            
+            <ol style="font-size: 1.2vw; padding-left: 5vw">
+                <li><a style="color:blue" href="">Controls</a></li>
+                <li><a style="color:blue" href="">On Romanization</a></li>
+                <li><a style="color:blue" href="">FAQ</a></li>
+            </ol>
+            <br><hr>
+
+            <h1 id="controls" style="font-size: 2.2vw; font-family: Georgia; padding-left: 3vw; padding-top:2vh">Controls</h1>
+            <div id="helprow">
+                <div id="helpcol">
+                    <img id="helpimg" src="help/help1.png">
+                    <h1 id="helptext">Click on the logo or the ”Home” link in the top ribbon to access the home page</h1>
+                    <img id="helpimg" src="help/help3.png">
+                    <h1 id="helptext">Click the arrow buttons or press the horizontal arrow keys to move along the guide path</h1>
+                    <img id="helpimg" src="help/help5.png">
+                    <h1 id="helptext">Click links in the text to jump to their pages</h1>
+                    <img id="helpimg" src="help/help7.png">
+                    <h1 id="helptext">The Guide Path is a set of selected pages that you can move along and gain a basic understanding of the topic. You can veer off the path to explore interesting branches by clicking the blue links in the text or using the search bar</h1>
+                    <img id="helpimg" src="help/help9.png">
+                    <h1 id="helptext">Use the vertical arrow keys on your keyboard to cycle between images and maps</h1>
+                </div>
+                <div id="helpcol" style="margin-top: 18vw">
+                    <img id="helpimg" src="help/help2.png">
+                    <h1 id="helptext">Click the links in the ribbon to access the other administrative pages</h1>
+                    <img id="helpimg" src="help/help4.png">
+                    <h1 id="helptext">Click links in the text to jump to their pages</h1>
+                    <img id="helpimg" src="help/help6.png">
+                    <h1 id="helptext">Use the search bar at the right side of the ribbon to search among the page titles</h1>
+                    <img id="helpimg" src="help/help8.png">
+                    <h1 id="helptext">Click the ”Back to Guide Path” link if you have veered off and wish to return</h1>
+                </div>
+            </div>
+            
+            <hr>
+            <h1 id="romanization" style="font-size: 2.2vw; font-family: Georgia; padding-left: 3vw; padding-top:2vh">On Romanization</h1>
+            <p style="font-size: 1.3vw; font-family: Georgia; padding-left: 5vw; padding-right: 7vw; padding-top:1vh; text-align: justify">As this site mainly concerns itself with the political development of a region whose people do not use an alphabet to record their language, it is necessary to transcribe it, to eliminate the language barrier. Since there is no definitive method of transcription, on most occasions I have used the versions most common in the literature, with the simplified Chinese text and its Pinyin transcription in parentheses. The searchbar has prompts for the Wade–Giles and Pinyin transcriptions, as well as other commonly used forms.</p>
+        </div>
+    </body>
+</html>

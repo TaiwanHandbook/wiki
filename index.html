@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>Taiwan Handbook</title>
+        <link rel="icon" href="pages/images/icon.png">
+        <link rel="stylesheet" href="css/search1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            #startB {
+                box-shadow: 0px 4px 13px -3px #5a7373;
+                background:linear-gradient(to bottom, #489fb5 5%, #82c0cc 100%);
+                background-color:#489fb5;
+                border-radius:8px;
+                border: transparent 0px;
+                display:inline-block;
+                cursor:pointer;
+                color:#ffffff;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size:2.5vw;
+                font-weight:bold;
+                padding:3.5vh 5vw;
+                text-decoration:none;
+                text-shadow:2px 2px 1px #063342;
+                margin-top: 4vh;
+                margin-bottom: 8vh;
+            }
+            #startB:hover {
+                background:linear-gradient(to bottom, #82c0cc 5%, #489fb5 100%);
+                background-color:#82c0cc;
+            }
+            #startB:active {
+                position:relative;
+                top:3px;
+            }
+
+            #indHead{
+                background-image: url("pages/images/front1.jpg") ;
+                background-repeat: no-repeat;
+                background-size: cover; 
+                background-position: center;
+                width: 100%;
+                height: 70vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #indHeadText{
+                width: 50%;
+                margin-right: 40%;
+                margin-bottom: 4%;
+                padding-left: 3vw;
+                padding-right: 3vw;
+                padding-top: 3vh;
+                padding-bottom: 3vh;
+                background-color: aquamarine;
+                font-family: Georgia;
+                background-color: rgba(0,0,0,.8);
+                color: white;
+            }
+            #indBody{
+                padding: 5vw;
+                padding-right: 8vw;
+                padding-top: 4vh;
+            }
+            h1{
+                font-size: 2.2vw;
+            }
+            h2{
+                font-size: 2vw;
+            }
+            p{
+                font-size: 1.3vw;
+                text-align: justify;
+            }
+
+        </style>
+    </head>
+    
+    <body style="font-family: Georgia; overflow-y: scroll;">
+        <div id="homeFlex" style="position:sticky; top: 0px;">
+            <div id="homeFlex1">
+                <img src="pages/images/home.png" id="homeImg">
+                <a id="homeLink" href="index.html">Home</a>
+                <a id="homeLink" href="about.html">About</a>
+                <a id="homeLink" href="all.html">Glossary</a>
+                <a id="homeLink" href="bibliography.html">Bibliography</a>
+                <a id="homeLink" href="feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="help.html">Help</a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name...">
+                </div>
+                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="js/searchbar.js"></script>
+        </div>
+        <div>
+            <div id="indHead">
+                <div id="indHeadText">
+                    <p style="font-size: 1.7vw;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+            </div>
+            <div id="indBody">
+                <h1>Taiwan's Journey</h1>
+                <p>In his autobiography, Chen Shui-bian recalls that his mother, a poor farming tenant, would put him in a hole near the fields she worked, as a substitute for a playpen. Over the next 50 years, Chen managed to hoist himself from the hole in the ground to the top university of the country, to being the attorneys of leading pro-democracy politicians and activists, eventually winning the 2000 presidential election, becoming the first president of Taiwan from the Democratic Progressive Party, and signalling the end of the Kuomintang's hegemony. In parallel, Taiwan, formally the Republic of China, was undergoing equivalent developments, both economically and politically. From an increasingly isolated, extremely repressive and authoritarian island nation, plagued by hiperinflation in the early 1950s, Taiwan has experienced some of the fastest economic growth and democratisation in history, managing to transform itself into the most developed democracy of the region, and an essential cog of the international markets.</p>
+                <p>Taiwan's case is truly exceptional. ///SEGWAY///</p>
+                <div style="display: flex; justify-content: center; width: 100%;">
+                    <button onclick="guidePagesSetup()" id="startB">Start the Journey</button>
+                </div>
+                
+                <h2>How The Site Works</h2>
+                <p>This site is designed to familiarise you with the history, and political development of Taiwan in a brief but informative manner. You will be guided along a short path of pages, each describing a single aspect of Taiwanese history and how it contributed to its development. You have the opportunity to veer off this path and explore branches that interest you more by clicking the blue links in the text, or the ones under the "Related links" header at the bottom. Learn more by visiting the <a href="help.html">Help</a> and <a href="about.html">About</a> pages.</p>
+            </div>
+        </div>
+        <script>
+            window.onload = function guideDef() {
+                sessionStorage.setItem("guide", 0)
+            }
+
+            function guidePagesSetup(){
+                const pages = "Ilha_Formosa,Geography_of_Taiwan,Taiwanese_indigenous_peoples,VOC,Kingdom_of_Tungning,Qing,Japan,Retrocession"
+                sessionStorage.setItem("currentPage", 1)
+                sessionStorage.setItem("Pages", pages)
+                sessionStorage.setItem("guide", 3)
+                window.location.href = "pages/" + pages.split(",")[0] + ".html"
+            }
+        </script>
+    </body>
+</html>

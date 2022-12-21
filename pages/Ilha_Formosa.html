@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Ilha Formosa!</title>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="../css/img-map.css">
+        <link rel="stylesheet" href="../css/progress.css">
+        <link rel="stylesheet" href="../css/search1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            var images = ["Ilha_Formosa"]
+            var credits = ["A Dutch map of Taiwan, circa 1640, Wikimedia Commons"]
+            var map = true
+        </script>
+        <script src="../js/image.js"></script>
+    </head>
+    
+    <body>
+        <div id="homeFlex">
+            <div id="homeFlex1">
+                <a href="../index.html"><img src="images/home.png" id="homeImg"></a>
+                <a id="homeLink" href="../index.html">Home</a>
+                <a id="homeLink" href="../about.html">About</a>
+                <a id="homeLink" href="../all.html">Glossary</a>
+                <a id="homeLink" href="../bibliography.html">Bibliography</a>
+                <a id="homeLink" href="../feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="../help.html">Help</a>
+                <a id="homeLinkPath" href="../redirect2.html" style="display: none;">Back to Guide Path</a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="../redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
+                </div>
+                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="../js/searchbar.js"></script>
+        </div>
+        <div id="infodiv">
+            <div id="FlexCont">
+                <div id="FlexImage" style="background-image: url(images/Ilha_Formosa.jpg);">
+                    <span id="caption">A Dutch map of Taiwan, circa 1640, Wikimedia Commons </span>
+                </div>
+                <iframe id="map" width="40%" height="100%" style="border:0; display:none; z-index: 0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3747121.81958051!2d120.0843006!3d23.485750050000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ef3065c07572f%3A0xe711f004bf9c5469!2sTajvan!5e0!3m2!1shu!2shu!4v1666361979038!5m2!1shu!2shu" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="FlexText">
+                    <div id="FlexContText">
+                        <h1 style="font-size: 2vw ;"><i>Ilha Formosa!</i></h1>
+                        <p><b><i>Formosa</i></b> was the name by which the Western world first came to know the island we now call Taiwan</p>
+						<p>The name was attributed to it after a passanger on a Portuguese ship sailing by labelled it <i>"Ilha Formosa!"</i>, Portuguese for "beautiful island", in 1544, which was recorded in the ship's log.</p>
+                        <br><br><hr>
+                        <!--<h2 style="font-size: 1.7vw ;">Related links</h2>
+                        <ul>
+                            <li><a href="../pages/Chiang_Kai-shek.html">Chiang Kai-shek</a></li>
+                        </ul>
+                        <br><br><hr>-->
+                        <h2 style="font-size: 1.7vw ;">References</h2>
+                        <ol style="font-size: 1.1vw;">
+                            <li id="1">Rigger, S. (2014). Why Taiwan matters: small island, global powerhouse. Lanham: Rowman & Littlefield, pp.19-52</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="progressFlex" style="display: none;">
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="prevPage()">◄</button>
+            <div id="progressbar"><div id="progress"><span id="progressSpan">42 / 100</span></div></div>
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="nextPage()">►</button>
+        </div>
+        <script src="../js/progress.js"></script>
+		<script src="../js/keys.js"></script>
+    </body>
+
+</html>

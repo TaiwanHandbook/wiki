@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Kinmen</title>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="../css/img-map.css">
+        <link rel="stylesheet" href="../css/progress.css">
+        <link rel="stylesheet" href="../css/search1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            var images = ["kinmen.jpg"] //MAKE LIST OF IMAGE NAMES HERE//
+            var credits = ["Kinmen islands mere kilometers from China, The Atlantic"] //MAKE LIST OF IMAGE CAPTIONS HERE//
+            var map = true //TOGGLE//
+        </script>
+        <script src="../js/image.js"></script>
+    </head>
+    
+    <body>
+        <div id="homeFlex">
+            <div id="homeFlex1">
+                <a href="../index.html"><img src="images/home.png" id="homeImg"></a>
+                <a id="homeLink" href="../index.html">Home</a>
+                <a id="homeLink" href="../about.html">About</a>
+                <a id="homeLink" href="../all.html">Glossary</a>
+                <a id="homeLink" href="../bibliography.html">Bibliography</a>
+                <a id="homeLink" href="../feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="../help.html">Help</a>
+                <a id="homeLinkPath" href="../redirect2.html" style="display: none;">Back to Guide Path</a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="../redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
+                </div>
+                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="../js/searchbar.js"></script>
+        </div>
+        <div id="infodiv">
+            <div id="FlexCont">
+                <div id="FlexImage" style="background-image: url(images/kinmen.jpg);">
+                    <span id="caption">Kinmen islands mere kilometers from China</span>
+                </div>
+                <iframe id="map" width="40%" height="100%" style="border:0; display:none; z-index: 0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116217.64220182621!2d118.30603107298266!3d24.457677566161703!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3414a3698d419cfb%3A0x94d6e26dcdc018c!2sGreat%20Kinmen%20Island!5e0!3m2!1shu!2shu!4v1669461112425!5m2!1shu!2shu" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="FlexText">
+                    <div id="FlexContText">
+                        <h1 style="font-size: 2vw ;">Kinmen</h1>
+                        <p><b>The Kinmen archipelago</b> is a set of small islands under Taiwanese jurisdiction, despite being located only a few kilometers off the coast of the <a href="Fujian.html">Fujianese</a> port city of Xiamen.</p>
+                        <p>It was used by the <a href="ROC.html">ROC</a> during the late stages of the <a href="Chinese_Civil_War.html">Chinese Civil War</a> to broadcast propaganda to the Communist-controlled Mainland. Heavy fortifications helped it maintain control over it to this day. (as of writing)</p>
+                        <br><br><hr>
+                        <!--<h2 style="font-size: 1.7vw ;">Related links</h2>
+                        <ul>
+                            <li><a href="../pages/Chiang_Kai-shek.html">Chiang Kai-shek</a></li>
+                        </ul>
+                        <br><br><hr>-->
+                        <h2 style="font-size: 1.7vw ;">References</h2>
+                        <ol style="font-size: 1.1vw;">
+                            <li id="1">Taylor, A. (2015). Taiwan’s Kinmen Islands, Only a Few Miles From Mainland China - The Atlantic. [online] www.theatlantic.com. Available at: <a href="https://www.theatlantic.com/photo/2015/10/taiwans-kinmen-islands-only-a-few-miles-from-mainland-china/409720/">https://www.theatlantic.com/photo/2015/10/taiwans-kinmen-islands-only-a-few-miles-from-mainland-china/409720/</a> [Accessed 1 Oct. 2020].</li>
+                            <li id="2">Rigger, S. (2014). Why Taiwan matters: small island, global powerhouse. Lanham: Rowman & Littlefield, p.19-52.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="progressFlex" style="display: none;">
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="prevPage()">◄</button>
+            <div id="progressbar"><div id="progress"><span id="progressSpan">42 / 100</span></div></div>
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="nextPage()">►</button>
+        </div>
+        <script src="../js/progress.js"></script>
+		<script src="../js/keys.js"></script>
+    </body>
+
+</html>

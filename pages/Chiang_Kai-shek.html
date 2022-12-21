@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Taipei</title>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="../css/img-map.css">
+        <link rel="stylesheet" href="../css/progress.css">
+        <link rel="stylesheet" href="../css/search1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            var images = ["Chiang_Kai-shek.jpg"]
+            var credits = ["Image Caption: credit to John Doe"]
+            var map = false
+        </script>
+        <script src="../js/image.js"></script>
+    </head>
+    
+    <body>
+        <div id="homeFlex">
+            <div id="homeFlex1">
+                <img src="images/home.png" id="homeImg">
+                <a id="homeLink" href="../index.html">Home</a>
+                <a id="homeLink" href="../about.html">About</a>
+                <a id="homeLink" href="../all.html">Glossary</a>
+                <a id="homeLink" href="../bibliography.html">Bibliography</a>
+                <a id="homeLink" href="../feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="../help.html">Help</a>
+                <a id="homeLinkPath" href="../redirect2.html" style="display: none;">Back to Guide Path</a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="../redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name...">
+                </div>
+                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="../js/searchbar.js"></script>
+        </div>
+        <div id="infodiv">
+            <div id="FlexCont">
+                <div id="FlexImage" style="background-image: url(images/Chiang_Kai-shek.jpg);">
+                    <span id="caption">Image Caption: credit to John Doe</span>
+                </div>
+                <div id="FlexText">
+                    <div id="FlexContText">
+                        <h1 style="font-size: 2vw ;">Chiang Kai-shek</h1>
+                        <p><b>Taipei</b> is the capital city of Taiwan. It is home to the once tallest building in the world, the Taipei 101</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eu metus sem. Phasellus a libero nunc. Fusce metus augue, condimentum nec auctor ut, pretium ut tellus. Aliquam elementum nisi lacus, eget bibendum quam viverra quis. In hac habitasse platea dictumst. Nam imperdiet magna vel placerat aliquet. Nam at nibh id risus viverra tincidunt et quis lectus. Curabitur est quam, imperdiet at nisl eget, ultrices posuere dolor.<br>
+                            Proin et feugiat sapien, tincidunt finibus mauris. Donec luctus, nunc eget porttitor semper, ante dolor venenatis urna, non condimentum sem justo nec nibh. Duis eu congue risus, ac tempor magna. Nullam eget massa porttitor, mattis sem vel, condimentum dolor. Nullam nec imperdiet elit. Curabitur mauris turpis, pulvinar at urna molestie, efficitur convallis leo. Mauris tempus consequat blandit. Maecenas iaculis aliquam eros id pellentesque. Nullam laoreet vulputate massa ac condimentum. Aenean vehicula elit eu odio iaculis, ut tristique lorem consectetur. Integer egestas convallis eros, vitae cursus felis consequat et.<br>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et odio urna. Maecenas in dictum velit. Suspendisse faucibus risus et nisl auctor ullamcorper. Etiam maximus dignissim massa et eleifend. Suspendisse lobortis, tortor in faucibus tincidunt, arcu diam ultricies nulla, eu luctus odio purus in risus. Sed fringilla risus in facilisis blandit. Nam nec risus at libero efficitur placerat. Donec lacus ex, congue sit amet dui id, facilisis placerat sapien. Morbi quis porttitor est.<br>
+                            Suspendisse velit eros, aliquet efficitur vulputate id, euismod at ante. Suspendisse pharetra consequat vehicula. Nullam non nibh at eros pretium malesuada. Curabitur id lorem feugiat, accumsan ipsum sit amet, bibendum sapien. Mauris tellus nisl, lobortis at nisl a, ultricies dapibus sapien. Sed aliquam dignissim diam, id fringilla ligula condimentum sed. Aliquam interdum, dolor id vulputate vestibulum, velit erat ullamcorper leo, a vulputate urna ex et lacus. Pellentesque id ipsum ligula. Donec eu ex justo. Etiam hendrerit augue at neque fringilla aliquet. Etiam pharetra gravida nibh, pulvinar vulputate tellus aliquam sed. Mauris eget dolor varius, convallis risus eu, porttitor nisl. Phasellus bibendum lacinia volutpat. Mauris lacinia efficitur ultrices. Mauris et fermentum lacus.</p>
+                        <br><br><hr>
+                        <!--<h2 style="font-size: 1.7vw ;">Related links</h2>
+                        <ul>
+                            <li><a href="../pages/Chiang_Kai-shek.html">Chiang Kai-shek</a></li>
+                        </ul>
+                        <br><br><hr>-->
+                        <h2 style="font-size: 1.7vw ;">References</h2>
+                        <ol style="font-size: 1.1vw;">
+                            <li><a href="../pages/Chiang_Kai-shek.html">Chiang Kai-shek</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="progressFlex" style="display: none;">
+            <button style="width: 6%; height:100%; font-family: Georgia;" onclick="prevPage()">◄</button>
+            <div id="progressbar"><div id="progress"><span id="progressSpan">42 / 100</span></div></div>
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="nextPage()">►</button>
+        </div>
+        <script src="../js/progress.js"></script>
+		<script src="../js/keys.js"></script>
+    </body>
+
+</html>

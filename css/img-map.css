@@ -1,0 +1,71 @@
+body {
+  margin: 0px;
+  height: 100%; 
+  overflow: hidden
+}
+
+.div{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  object-fit: cover;
+}
+#FlexCont {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  height: 100%;
+  overflow:-moz-hidden-unscrollable;
+  flex-direction: row;
+  background-color: #fff;
+}
+#FlexContText{
+  text-align: justify;
+  text-justify: inter-word;
+  padding-right: 3vw;
+  padding-left: 3vw;
+}
+#FlexImage{
+  width: 40%;
+  max-width: 40%;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+#FlexText{
+  width: 60%;
+  max-width: 60%;
+  height: 94%;
+  margin: 1%;
+  background-color: white;
+  float: right;
+  overflow: scroll;
+}
+#FlexContText{
+  font-size: 1.3vw;
+  font-family: Georgia;
+}
+#img1 {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+#caption{
+  position: relative;
+  left: 1vw;
+  bottom: 1vh;
+  vertical-align: text-bottom;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: 1vw;
+  font-family: Georgia;
+}

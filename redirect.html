@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <script>
+            var nPage = window.location.search.split("=")[1];
+            nPage = nPage.replaceAll("+", "_");
+
+            if (nPage == "Jinmen"){
+                nPage = "Kinmen"
+            };
+            if (nPage == "Quemoy"){
+                nPage = "Kinmen"
+            };
+            if (nPage == "Qing_Dynasty"){
+                nPage = "Qing"
+            };
+            if (nPage == "Qing_Empire"){
+                nPage = "Qing"
+            };
+            if (nPage == "Republic_of_China"){
+                nPage = "ROC"
+            };
+            if (nPage == "Demographics"){
+                nPage = "Demographics_of_Taiwan"
+            };
+            if (nPage == "Geography"){
+                nPage = "Geography_of_Taiwan"
+            };
+            if (nPage == "Geography_of_Taiwan"){
+                nPage = "Geography_of_Taiwan"
+            };
+            if (nPage == "Indigenous_peoples"){
+                nPage = "Taiwanese_indigenous_peoples"
+            };
+            if (nPage == "Aboriginals"){
+                nPage = "Taiwanese_indigenous_peoples"
+            };
+            if (nPage == "Austronesians"){
+                nPage = "Taiwanese_indigenous_peoples"
+            };
+            if (nPage == "Dutch_East_India_Company"){
+                nPage = "VOC"
+            };
+            if (nPage == "Koxinga"){
+                nPage = "Zheng_Chenggong"
+            };
+
+            window.location.href = "pages/" + nPage + ".html";
+        </script>
+    </head>
+</html>

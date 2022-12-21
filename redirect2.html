@@ -1,0 +1,8 @@
+<html>
+    <head>
+        <script>
+            window.location.href = "pages/" + sessionStorage.getItem("Pages").split(",")[sessionStorage.getItem("currentPage") -1] + ".html";
+            sessionStorage.setItem("guide", 3)
+        </script>
+    </head>
+</html>
