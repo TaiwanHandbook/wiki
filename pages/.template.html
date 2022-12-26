@@ -8,12 +8,21 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script>
-            var images = [""] //MAKE LIST OF IMAGE NAMES HERE//
-            var credits = [""] //MAKE LIST OF IMAGE CAPTIONS HERE//
-            var map = true //TOGGLE//
+            var images = [""]
+            var credits = [""]
+            var map = true
         </script>
         <script src="../js/image.js"></script>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
     
     <body>
         <div id="homeFlex">
@@ -31,7 +40,7 @@
                 <div class="autocomplete">
                     <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
                 </div>
-                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
             </form>
             <script src="../js/searchbar.js"></script>
         </div>
@@ -51,13 +60,9 @@
                             <li><a href="../pages/Chiang_Kai-shek.html">Chiang Kai-shek</a></li>
                         </ul>
                         <br><br><hr>-->
-                        <ul>
-                            <li><a href="Chiang_Kai-shek.html">Chiang Kai-shek</a></li>
-                        </ul>
-                        <br><br><hr>
                         <h2 style="font-size: 1.7vw ;">References</h2>
                         <ol style="font-size: 1.1vw;">
-                            <li id="1">... <a href=""></a></li>
+                            <li id="1">... <a href="" target="_blank"></a></li>
                         </ol>
                     </div>
                 </div>

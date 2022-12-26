@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Taiwanese indigenous peoples</title>
+        <title>Languages of Taiwan</title>
         <link rel="icon" href="images/icon.png">
         <link rel="stylesheet" href="../css/img-map.css">
         <link rel="stylesheet" href="../css/progress.css">
@@ -8,12 +8,21 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script>
-            var images = ["amis.jpg","indigenous.jpg"] //MAKE LIST OF IMAGE NAMES HERE//
-            var credits = ["Indigenous dancers at Amis Music Festival, 2016, Wikimedia Commons","Distribution of Formosan languages before Chinese colonisation, Blust (1999), Wikimedia Commons"] //MAKE LIST OF IMAGE CAPTIONS HERE//
-            var map = false
+            var images = [""]
+            var credits = [""]
+            var map = true
         </script>
         <script src="../js/image.js"></script>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
     
     <body>
         <div id="homeFlex">
@@ -31,20 +40,20 @@
                 <div class="autocomplete">
                     <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
                 </div>
-                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
             </form>
             <script src="../js/searchbar.js"></script>
         </div>
         <div id="infodiv">
             <div id="FlexCont">
-                <div id="FlexImage" style="background-image: url(images/amis.jpg);">
-                    <span id="caption">Indigenous dancers at Amis Music Festival, 2016, Wikimedia Commons</span>
+                <!--IMAGE HERE--><div id="FlexImage" style="background-image: url(images);">
+                    <span id="caption"><!-- IMAGE CAPTION --></span>
                 </div>
+                <!-- MAP HERE <iframe src="" id="map" width="40%" height="100%" style="border:0; display:none; z-index: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                 <div id="FlexText">
                     <div id="FlexContText">
-                        <h1 style="font-size: 2vw ;">Taiwanese indigenous peoples</h1>
-                        <p>The <b>indigenous peoples of Taiwan</b> are Austronesian peoples whose ancestors have inhabited the island for approximately 4000 years.<sup><a href="#1">1</a></sup> According to census data, they constitute 2.48% of Taiwan's popuation.<sup><a href="#2">2</a></sup> The <a href="ROC.html">Taiwanese government</a> officially recognises 16 indigenous groups and tribes, which are, in descending order by their population sizes: Amis, Paiwan, Atayal, Bunun, Taroko, Puyuma, Rukai, Seediq, Tsou, Saisiyat, Yami, Kavalan, Sakizaya, Thao, Kanakanavu and Saaroa.<sup><a href="#3">3</a></sup></p>
-                        <p>/// most in western plains assimilated; social status, discrimination, KMT support ///</p>
+                        <h1 style="font-size: 2vw ;">Languages of Taiwan</h1>
+                        <p>///Mainlander mandarin, local hokkien (and hakka), aboriginal "formosan languages"/// </p>
                         <br><br><hr>
                         <!--<h2 style="font-size: 1.7vw ;">Related links</h2>
                         <ul>
@@ -53,9 +62,7 @@
                         <br><br><hr>-->
                         <h2 style="font-size: 1.7vw ;">References</h2>
                         <ol style="font-size: 1.1vw;">
-                            <li id="1">/// theyve been here for 4000 years <a href=""></a></li>
-                            <li id="1">2.5% <a href=""></a></li>
-                            <li id="3">Council of Indigenous Peoples (2016). Aboriginal Population Statistics. [online] Council of Indigenous Peoples. Available at: <a href="https://web.archive.org/web/20160413145601/http://www.apc.gov.tw/portal/docList.html?CID=940F9579765AC6A0">https://web.archive.org/web/20160413145601/http://www.apc.gov.tw/portal/docList.html?CID=940F9579765AC6A0</a> [Accessed 12 Apr. 2016]. </li>
+                            <li id="1">Rigger, S. (2011). Building Taiwan. In: Why Taiwan Matters. Rowman & Littlefield Publishers.</li>
                         </ol>
                     </div>
                 </div>

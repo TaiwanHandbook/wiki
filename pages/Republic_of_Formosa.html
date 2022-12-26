@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Zheng Chenggong</title>
+        <title>Republic of Formosa</title>
         <link rel="icon" href="images/icon.png">
         <link rel="stylesheet" href="../css/img-map.css">
         <link rel="stylesheet" href="../css/progress.css">
@@ -8,12 +8,21 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script>
-            var images = ["zheng.jpg","zheng2.jpg"] //MAKE LIST OF IMAGE NAMES HERE//
-            var credits = ["Statue of Zheng Chenggong in Xiamen, Britannica", "Mid 17th century portrait of Koxinga, Wikimedia Commons"] //MAKE LIST OF IMAGE CAPTIONS HERE//
-            var map = false //TOGGLE//
+            var images = [""]
+            var credits = [""]
+            var map = true
         </script>
         <script src="../js/image.js"></script>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
     
     <body>
         <div id="homeFlex">
@@ -31,22 +40,20 @@
                 <div class="autocomplete">
                     <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
                 </div>
-                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
             </form>
             <script src="../js/searchbar.js"></script>
         </div>
         <div id="infodiv">
             <div id="FlexCont">
-                <div id="FlexImage" style="background-image: url(images/zheng.jpg);">
-                    <span id="caption">Statue of Zheng Chenggong in Xiamen, Britannica</span>
+                <!--IMAGE HERE--><div id="FlexImage" style="background-image: url(images);">
+                    <span id="caption"><!-- IMAGE CAPTION --></span>
                 </div>
+                <!-- MAP HERE <iframe src="" id="map" width="40%" height="100%" style="border:0; display:none; z-index: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
                 <div id="FlexText">
                     <div id="FlexContText">
-                        <h1 style="font-size: 2vw ;">Zheng Chenggong</h1>
-                        <p><b>Zheng Chenggong</b>, also known by his nickname <b>Koxinga</b>, was a warlord who captured Taiwan from the <a href="VOC.html">Dutch</a> in 1662 and founded the <a href="Kingdom_of_Tungning.html">Kingdom of Tungtu</a>, later renamed to Kingdom of Tungning by his son.</p>
-                        <p>His father, Zheng Zhilong, was the commander of a pirate fleet patrolling the vicinity of the Taiwan Straight. After having his Taiwanese base captured and himself kidnapped by the Dutch, he joined forces with the Ming Dynasty, which he betrayed during its owerthrowing by the <a href="Qing.html">Qing</a>.</p>
-                        <p>Zheng Chenggong, however, remained loyal to the Ming and after his failed assault of the young Qing Dynasty in 1959, he fled to Taiwan in 1661, and expelled the Dutch fully by 1662.</p>
-                        <p>His brief reign over the island was characterised by agricultural developments and early efforts to sinicize Taiwan through the introduction of education and spreading of Confucian values. His son, Zheng Jing, inherited the throne following his early death in 1662. The Qing eventually ended up capturing the island from his grandson in 1683</p>
+                        <h1 style="font-size: 2vw ;">Republic of Formosa</h1>
+                        <p>The <b>Republic of Formosa</b> was a short-lived political entity that was created by Chinese officials on Taiwan with the purpose to resist the Japanese takeover following the <a>Treaty of Shimonoseki</a></p>
                         <br><br><hr>
                         <!--<h2 style="font-size: 1.7vw ;">Related links</h2>
                         <ul>
@@ -55,10 +62,7 @@
                         <br><br><hr>-->
                         <h2 style="font-size: 1.7vw ;">References</h2>
                         <ol style="font-size: 1.1vw;">
-                            <li id="1">Rigger, S. (2014). <i>Why Taiwan matters: small island, global powerhouse.</i> Lanham: Rowman & Littlefield, pp.19-52.</li>
-                            <li id="2">Manthorpe, J. (2008). Forbidden nation: a history of Taiwan. Basingstoke: Palgrave Macmillan, pp.53–98.</li>
-                            <li id="3">Wills, J.E. (2007). The Seventeenth-Century Transformation: Taiwan Under the Dutch and the Cheng Regime. In: Taiwan: A New History. M.E. Sharpe, pp.84–106.</li>
-                            <li id="4">Croizier, R. (2022). Zheng Chenggong | Chinese pirate | Britannica. In: Encyclopædia Britannica. [online] Available at: <a href="https://www.britannica.com/biography/Zheng-Chenggong">https://www.britannica.com/biography/Zheng-Chenggong</a> [Accessed 22 Oct. 2022].</li>
+                            <li id="1">Rigger, S. (2011). Building Taiwan. In: Why Taiwan Matters. Rowman & Littlefield Publishers.</li>
                         </ol>
                     </div>
                 </div>

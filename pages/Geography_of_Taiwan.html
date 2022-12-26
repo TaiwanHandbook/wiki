@@ -14,6 +14,15 @@
         </script>
         <script src="../js/image.js"></script>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
     
     <body>
         <div id="homeFlex">
@@ -31,7 +40,7 @@
                 <div class="autocomplete">
                     <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
                 </div>
-                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
             </form>
             <script src="../js/searchbar.js"></script>
         </div>
@@ -44,7 +53,7 @@
                 <div id="FlexText">
                     <div id="FlexContText">
                         <h1 style="font-size: 2vw ;">Geography of Taiwan</h1>
-                        <p>The island of <b>Taiwan</b>, also referred to as <a href="Ilha_Formosa.html"><i>Formosa</i></a>, is an island directly across China's <a href="Fujian.html">Fujian Province</a>, somewhat smaller than Switzerland and has an approximate population of 23 million. (as of 2022)<sup><a href="#1">1</a> <a href="#2">2</a> <a href="#3">3</a></sup> </p>
+                        <p>The island of <b>Taiwan</b>, also referred to as <a href="#" onclick="redir('Ilha_Formosa')"><i>Formosa</i></a>, is an island directly across China's <a href="Fujian.html">Fujian Province</a>, somewhat smaller than Switzerland and has an approximate population of 23 million. (as of 2022)<sup><a href="#1">1</a> <a href="#2">2</a> <a href="#3">3</a></sup> </p>
                         <p>It is one of a larger chain of islands stretching from <a href="Japan.html">Japan</a> to the Philippines.</p>
                         <p>The spine of large mountains running through the island in a North-South diretion has contributed to population centers, such as <a href="Taipei.html">Taipei,</a> <a href="Tainan.html">Tainan</a> and <a href="Kaohsiung.html">Kaohsiung</a>, evolving along the Western coast of the island. Its terrain, combied with the islands few natural harbors and stormy waters, has rendered the island difficult to traverse for early settlers and colonisers.</p>
                         <p>Its climate is subtropical, characterised by long and hot summers, short and mild winters, abundant precipitation and monsoon.</p>
@@ -56,9 +65,9 @@
                         <br><br><hr>-->
                         <h2 style="font-size: 1.7vw ;">References</h2>
                         <ol style="font-size: 1.1vw;">
-                            <li id="1">Cooper, J. (2022). <i>Taiwan | History, Flag, Map, Capital, Population, & Facts.</i> [online] Encyclopedia Britannica. Available at: <a href="https://www.britannica.com/place/Taiwan">https://www.britannica.com/place/Taiwan</a> [Accessed 21 Oct. 2022].</li>
-                            <li id="2">CIA (2022a). <i>Switzerland - The World Factbook.</i> [online] www.cia.gov. Available at: <a href="https://www.cia.gov/the-world-factbook/countries/switzerland/">https://www.cia.gov/the-world-factbook/countries/switzerland/</a> [Accessed 21 Oct. 2022].</li>
-                            <li id="3">CIA (2022b). <i>Taiwan - The World Factbook.</i> [online] www.cia.gov. Available at: <a href="https://www.cia.gov/the-world-factbook/countries/taiwan/">https://www.cia.gov/the-world-factbook/countries/taiwan/</a> [Accessed 21 Oct. 2022].</li>
+                            <li id="1">Cooper, J. (2022). <i>Taiwan | History, Flag, Map, Capital, Population, & Facts.</i> [online] Encyclopedia Britannica. Available at: <a href="https://www.britannica.com/place/Taiwan" target="_blank">https://www.britannica.com/place/Taiwan</a> [Accessed 21 Oct. 2022].</li>
+                            <li id="2">CIA (2022a). <i>Switzerland - The World Factbook.</i> [online] www.cia.gov. Available at: <a href="https://www.cia.gov/the-world-factbook/countries/switzerland/" target="_blank">https://www.cia.gov/the-world-factbook/countries/switzerland/</a> [Accessed 21 Oct. 2022].</li>
+                            <li id="3">CIA (2022b). <i>Taiwan - The World Factbook.</i> [online] www.cia.gov. Available at: <a href="https://www.cia.gov/the-world-factbook/countries/taiwan/" target="_blank">https://www.cia.gov/the-world-factbook/countries/taiwan/</a> [Accessed 21 Oct. 2022].</li>
                             <li id="4">Rigger, S. (2014). <i>Why Taiwan matters: small island, global powerhouse.</i> Lanham: Rowman & Littlefield, pp.19-52</li>
                         </ol>
                     </div>

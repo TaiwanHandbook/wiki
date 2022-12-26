@@ -8,12 +8,21 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <script>
-            var images = ["Ilha_Formosa"]
+            var images = ["Ilha_Formosa.jpg"]
             var credits = ["A Dutch map of Taiwan, circa 1640, Wikimedia Commons"]
             var map = true
         </script>
         <script src="../js/image.js"></script>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
     
     <body>
         <div id="homeFlex">
@@ -31,7 +40,7 @@
                 <div class="autocomplete">
                     <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
                 </div>
-                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
             </form>
             <script src="../js/searchbar.js"></script>
         </div>
@@ -47,11 +56,11 @@
                         <p><b><i>Formosa</i></b> was the name by which the Western world first came to know the island we now call Taiwan</p>
 						<p>The name was attributed to it after a passanger on a Portuguese ship sailing by labelled it <i>"Ilha Formosa!"</i>, Portuguese for "beautiful island", in 1544, which was recorded in the ship's log.</p>
                         <br><br><hr>
-                        <!--<h2 style="font-size: 1.7vw ;">Related links</h2>
+                        <h2 style="font-size: 1.7vw ;">Related links</h2>
                         <ul>
-                            <li><a href="../pages/Chiang_Kai-shek.html">Chiang Kai-shek</a></li>
+                            <li><a href="#" onclick="redir('Japan')">Chiang Kai-shek</a></li>
                         </ul>
-                        <br><br><hr>-->
+                        <br><br><hr>
                         <h2 style="font-size: 1.7vw ;">References</h2>
                         <ol style="font-size: 1.1vw;">
                             <li id="1">Rigger, S. (2014). Why Taiwan matters: small island, global powerhouse. Lanham: Rowman & Littlefield, pp.19-52</li>

@@ -37,6 +37,15 @@
             }
         </style>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
     
     <body style="font-family: Georgia;">
         <div id="homeFlex" style="position:sticky; top: 0px;">
@@ -53,7 +62,7 @@
                 <div class="autocomplete">
                     <input id="SearchInput" type="text" name="page" placeholder="Page name...">
                 </div>
-                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
             </form>
             <script src="js/searchbar.js"></script>
         </div>
@@ -95,7 +104,7 @@
             
             <hr>
             <h1 id="romanization" style="font-size: 2.2vw; font-family: Georgia; padding-left: 3vw; padding-top:2vh">On Romanization</h1>
-            <p style="font-size: 1.3vw; font-family: Georgia; padding-left: 5vw; padding-right: 7vw; padding-top:1vh; text-align: justify">As this site mainly concerns itself with the political development of a region whose people do not use an alphabet to record their language, it is necessary to transcribe it, to eliminate the language barrier. Since there is no definitive method of transcription, on most occasions I have used the versions most common in the literature, with the simplified Chinese text and its Pinyin transcription in parentheses. The searchbar has prompts for the Wade–Giles and Pinyin transcriptions, as well as other commonly used forms.</p>
+            <p style="font-size: 1.3vw; font-family: Georgia; padding-left: 5vw; padding-right: 7vw; padding-top:1vh; text-align: justify">As this site mainly concerns itself with the political development of a region whose people do not use an alphabet to record their language, it is necessary to transcribe it to eliminate the language barrier. Since there is no definitive method of transcription, on most occasions I have used the versions most common in the literature, with the traditional Chinese text and its Pinyin transcription in parentheses. The same is applied for several translated phrases.</p>
         </div>
     </body>
 </html>

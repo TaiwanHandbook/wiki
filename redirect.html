@@ -4,47 +4,60 @@
             var nPage = window.location.search.split("=")[1];
             nPage = nPage.replaceAll("+", "_");
 
-            if (nPage == "Jinmen"){
-                nPage = "Kinmen"
+            if (nPage == "228"){
+                nPage = "2-28_Incident"
             };
-            if (nPage == "Quemoy"){
-                nPage = "Kinmen"
+            if (nPage == "2-28"){
+                nPage = "2-28_Incident"
             };
-            if (nPage == "Qing_Dynasty"){
-                nPage = "Qing"
+            if (nPage == "2-2-8"){
+                nPage = "2-28_Incident"
             };
-            if (nPage == "Qing_Empire"){
-                nPage = "Qing"
+            if (nPage == "228 Massacre"){
+                nPage = "2-28_Incident"
             };
-            if (nPage == "Republic_of_China"){
-                nPage = "ROC"
+            if (nPage == "February 28 Massacre"){
+                nPage = "2-28_Incident"
             };
-            if (nPage == "Demographics"){
-                nPage = "Demographics_of_Taiwan"
+            if (nPage == "February 28 Incident"){
+                nPage = "2-28_Incident"
+            };
+
+            if (nPage == "Cairo"){
+                nPage = "Cairo_Conference"
+            };
+            if (nPage == "Formosa"){
+                nPage = "Ilha_Formosa"
             };
             if (nPage == "Geography"){
                 nPage = "Geography_of_Taiwan"
             };
-            if (nPage == "Geography_of_Taiwan"){
-                nPage = "Geography_of_Taiwan"
+            if (nPage == "Japan"){
+                nPage = "Empire_of_Japan"
             };
-            if (nPage == "Indigenous_peoples"){
-                nPage = "Taiwanese_indigenous_peoples"
+            if (nPage == "Jinmen island"){
+                nPage = "Kinmen"
             };
-            if (nPage == "Aboriginals"){
-                nPage = "Taiwanese_indigenous_peoples"
+            if (nPage == "Kinmen island"){
+                nPage = "Kinmen"
             };
-            if (nPage == "Austronesians"){
-                nPage = "Taiwanese_indigenous_peoples"
+            if (nPage == "ROC"){
+                nPage = "Republic_of_China"
             };
-            if (nPage == "Dutch_East_India_Company"){
-                nPage = "VOC"
-            };
-            if (nPage == "Koxinga"){
-                nPage = "Zheng_Chenggong"
+            if (nPage == "Shimonoseki"){
+                nPage = "Treaty_of_Shimonoseki"
             };
 
             window.location.href = "pages/" + nPage + ".html";
         </script>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
 </html>

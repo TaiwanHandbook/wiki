@@ -11,7 +11,7 @@ function addInd(){
         }
         else{
             document.getElementById("map").style.display = "none"
-            document.getElementById("FlexImage").style.display = "initial"
+            document.getElementById("FlexImage").style.display = "flex"
             document.getElementById("caption").textContent = credits[index]
             document.getElementById("FlexImage").style.backgroundImage =  "url(images/" + images[index] +")"
             document.getElementById("FlexImage")
@@ -37,7 +37,7 @@ function subInd(){
         }
         else{
             document.getElementById("map").style.display = "none"
-            document.getElementById("FlexImage").style.display = "initial"
+            document.getElementById("FlexImage").style.display = "flex"
             document.getElementById("caption").textContent = credits[index]
             document.getElementById("FlexImage").style.backgroundImage = "url(images/" + images[index] +")"
         }

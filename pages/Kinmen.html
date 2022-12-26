@@ -14,6 +14,15 @@
         </script>
         <script src="../js/image.js"></script>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
     
     <body>
         <div id="homeFlex">
@@ -31,7 +40,7 @@
                 <div class="autocomplete">
                     <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
                 </div>
-                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
             </form>
             <script src="../js/searchbar.js"></script>
         </div>
@@ -54,7 +63,7 @@
                         <br><br><hr>-->
                         <h2 style="font-size: 1.7vw ;">References</h2>
                         <ol style="font-size: 1.1vw;">
-                            <li id="1">Taylor, A. (2015). Taiwan’s Kinmen Islands, Only a Few Miles From Mainland China - The Atlantic. [online] www.theatlantic.com. Available at: <a href="https://www.theatlantic.com/photo/2015/10/taiwans-kinmen-islands-only-a-few-miles-from-mainland-china/409720/">https://www.theatlantic.com/photo/2015/10/taiwans-kinmen-islands-only-a-few-miles-from-mainland-china/409720/</a> [Accessed 1 Oct. 2020].</li>
+                            <li id="1">Taylor, A. (2015). Taiwan’s Kinmen Islands, Only a Few Miles From Mainland China - The Atlantic. [online] www.theatlantic.com. Available at: <a href="https://www.theatlantic.com/photo/2015/10/taiwans-kinmen-islands-only-a-few-miles-from-mainland-china/409720/" target="_blank">https://www.theatlantic.com/photo/2015/10/taiwans-kinmen-islands-only-a-few-miles-from-mainland-china/409720/</a> [Accessed 1 Oct. 2020].</li>
                             <li id="2">Rigger, S. (2014). Why Taiwan matters: small island, global powerhouse. Lanham: Rowman & Littlefield, p.19-52.</li>
                         </ol>
                     </div>

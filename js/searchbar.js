@@ -1,5 +1,3 @@
-var pages = ["Chiang Kai-shek", "Chinese Civil War", "First Sino-Japanese War", "Fujian", "Japan", "Kaohsiung", "Keelung", "Kinmen", "Jinmen", "Quemoy", "Qing", "Qing Dynasty", "Qing Empire", "Retrocession", "Republic of China", "ROC", "Tainan", "Taipei", "Demographics of Taiwan", "Demographics", "Geography of Taiwan", "Geography", "Taiwanese indigenous peoples", "Indigenous peoples", "Aboriginals", "Austronesians", "VOC", "Dutch East India Company", "Zheng Chenggong", "Koxinga"];
-
 function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
     the text field element and an array of possible autocompleted values:*/
@@ -96,4 +94,6 @@ function autocomplete(inp, arr) {
         closeAllLists(e.target);
     });
 }
-autocomplete(document.getElementById("SearchInput"), pages);
+
+const phrases = ["2-28 Incident", "February 28 Massacre", "Aborigines under Japanese Rule", "Cairo Conference", "Empire of Japan", "Japan", "Fujian", "Geography of Taiwan", "Ilha Formosa", "Formosa", "Kinmen island", "Republic of China", "Republic of Formosa", "Retrocession", "Taiwan Culture Society", "Treaty of Shimonoseki"];
+autocomplete(document.getElementById("SearchInput"), phrases);

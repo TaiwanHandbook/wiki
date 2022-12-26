@@ -42,19 +42,30 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
             }
             #indHeadText{
+                height: 95%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            #indHeadQuote{
                 width: 50%;
-                margin-right: 40%;
-                margin-bottom: 4%;
-                padding-left: 3vw;
-                padding-right: 3vw;
-                padding-top: 3vh;
-                padding-bottom: 3vh;
-                background-color: aquamarine;
                 font-family: Georgia;
                 background-color: rgba(0,0,0,.8);
                 color: white;
+                margin-right: 30%;
+                margin-bottom: 4%;
+                padding: 3%;
+            }
+            #indHeadCaption{
+                width: 100%;
+                height: 5%;
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: flex-end;
             }
             #indBody{
                 padding: 5vw;
@@ -71,9 +82,26 @@
                 font-size: 1.3vw;
                 text-align: justify;
             }
-
+            #caption{
+                vertical-align: text-bottom;
+                color: white;
+                text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+                font-size: 1vw;
+                font-family: Georgia;
+                padding-right: 1vw;
+                margin-bottom: 4px;
+              }
         </style>
     </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
     
     <body style="font-family: Georgia; overflow-y: scroll;">
         <div id="homeFlex" style="position:sticky; top: 0px;">
@@ -90,20 +118,27 @@
                 <div class="autocomplete">
                     <input id="SearchInput" type="text" name="page" placeholder="Page name...">
                 </div>
-                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
             </form>
             <script src="js/searchbar.js"></script>
         </div>
         <div>
             <div id="indHead">
                 <div id="indHeadText">
-                    <p style="font-size: 1.7vw;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <div id="indHeadQuote">
+                        <p style="font-size: 1.8vw; margin-top: 0px; ">"In the past half century, Taiwan's people rejected [their] status and stood up for themselves. In their determination to  claim a better future, they created one of the world's most successful economies and vibrant democracies."</p>
+                        <p style="font-size: 1.5vw; float:right; padding-right:1vw; margin-bottom: 0px;">— Shelley Rigger, <i>Why Taiwan Matters</i></p>
+                    </div>
+                </div>
+                <div id="indHeadCaption">
+                    <p id="caption">Credit: <a style="color:white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;" href="https://www.reddit.com/r/CityPorn/comments/d23w5s/dystopian_taipei_nights_endless_neon_street_signs/" target="_blank">Steve Chin Photography</a></p>
                 </div>
             </div>
             <div id="indBody">
                 <h1>Taiwan's Journey</h1>
-                <p>In his autobiography, Chen Shui-bian recalls that his mother, a poor farming tenant, would put him in a hole near the fields she worked, as a substitute for a playpen. Over the next 50 years, Chen managed to hoist himself from the hole in the ground to the top university of the country, to being the attorneys of leading pro-democracy politicians and activists, eventually winning the 2000 presidential election, becoming the first president of Taiwan from the Democratic Progressive Party, and signalling the end of the Kuomintang's hegemony. In parallel, Taiwan, formally the Republic of China, was undergoing equivalent developments, both economically and politically. From an increasingly isolated, extremely repressive and authoritarian island nation, plagued by hiperinflation in the early 1950s, Taiwan has experienced some of the fastest economic growth and democratisation in history, managing to transform itself into the most developed democracy of the region, and an essential cog of the international markets.</p>
-                <p>Taiwan's case is truly exceptional. ///SEGWAY///</p>
+                <p>In his autobiography, Chen Shui-bian recalls that his mother, a poor farming tenant, would put him in a hole near the fields she worked, as a substitute for a playpen. Over the next 50 years, Chen managed to hoist himself from the hole in the ground to the top university of the country, to being the attorneys of leading pro-democracy politicians and activists, eventually winning the 2000 presidential election, becoming the first president of Taiwan from the Democratic Progressive Party, and signalling the end of the Kuomintang's hegemony.</p>
+                <p>In parallel, Taiwan, formally the Republic of China, was undergoing equivalent developments, both economically and politically. From an increasingly isolated, extremely repressive and authoritarian island nation, plagued by hiperinflation in the early 1950s, Taiwan has experienced some of the fastest economic growth and democratisation in history. It managed to transform itself into the most developed democracy of the region, and an essential cog of the international markets.</p>
+                <p>Taiwan's case is truly exceptional. To learn about how Taiwan's economic and political miracle came to fruition, click the button below!</p>
                 <div style="display: flex; justify-content: center; width: 100%;">
                     <button onclick="guidePagesSetup()" id="startB">Start the Journey</button>
                 </div>
@@ -115,10 +150,10 @@
         <script>
             window.onload = function guideDef() {
                 sessionStorage.setItem("guide", 0)
-            }
+                }
 
             function guidePagesSetup(){
-                const pages = "Ilha_Formosa,Geography_of_Taiwan,Taiwanese_indigenous_peoples,VOC,Kingdom_of_Tungning,Qing,Japan,Retrocession"
+                const pages = "Treaty_of_Shimonoseki,Empire_of_Japan,Retrocession,2-28_Incident,Nationalist_retreat"
                 sessionStorage.setItem("currentPage", 1)
                 sessionStorage.setItem("Pages", pages)
                 sessionStorage.setItem("guide", 3)
