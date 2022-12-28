@@ -3,6 +3,8 @@
         <script>
             var nPage = window.location.search.split("=")[1];
             nPage = nPage.replaceAll("+", "_");
+            alert("1")
+            alert(nPage)
 
             if (nPage == "228"){
                 nPage = "2-28_Incident"
@@ -13,13 +15,13 @@
             if (nPage == "2-2-8"){
                 nPage = "2-28_Incident"
             };
-            if (nPage == "228 Massacre"){
+            if (nPage == "228_Massacre"){
                 nPage = "2-28_Incident"
             };
-            if (nPage == "February 28 Massacre"){
+            if (nPage == "February_28_Massacre"){
                 nPage = "2-28_Incident"
             };
-            if (nPage == "February 28 Incident"){
+            if (nPage == "February_28_Incident"){
                 nPage = "2-28_Incident"
             };
 
@@ -35,10 +37,10 @@
             if (nPage == "Japan"){
                 nPage = "Empire_of_Japan"
             };
-            if (nPage == "Jinmen island"){
+            if (nPage == "Jinmen_island"){
                 nPage = "Kinmen"
             };
-            if (nPage == "Kinmen island"){
+            if (nPage == "Kinmen_island"){
                 nPage = "Kinmen"
             };
             if (nPage == "ROC"){
@@ -48,6 +50,8 @@
                 nPage = "Treaty_of_Shimonoseki"
             };
 
+            alert("2")
+            alert(nPage)
             window.location.href = "pages/" + nPage + ".html";
         </script>
     </head>

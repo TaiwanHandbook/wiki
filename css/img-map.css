@@ -48,7 +48,8 @@ body {
   margin: 1%;
   background-color: white;
   float: right;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 #FlexContText{
   font-size: 1.3vw;
