@@ -73,7 +73,10 @@ window.onload = function onload() {
         // if enters with code 2
         else if (parseInt(sessionStorage.getItem("guide")) == 2){
             // NOT ON PATH
-            init(false)
+            if (sessionStorage.getItem("currentPage") == sessionStorage.getItem("Pages").split(",").indexOf(window.location.pathname.split("/").pop().split(".")[0])+1){
+               init(true)}
+            else {
+                init(false)}
         }
         // if enters with code 3
         else if (parseInt(sessionStorage.getItem("guide")) == 3){

@@ -66,12 +66,13 @@ input[type=text] {
   display: flex;
   flex-wrap: nowrap;
   justify-content:space-between;
-  width: 100%;
+  width: 100vw;
   height: 10vh;
   min-height: 70px;
   flex-direction: row;
   background-color: #fafafa;
   border-bottom: 1px solid black;
+  z-index: 2;
 }
 #homeFlex1{
   display: flex;

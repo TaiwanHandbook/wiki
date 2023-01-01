@@ -3,55 +3,64 @@
         <script>
             var nPage = window.location.search.split("=")[1];
             nPage = nPage.replaceAll("+", "_");
-            alert("1")
-            alert(nPage)
 
             if (nPage == "228"){
                 nPage = "2-28_Incident"
-            };
-            if (nPage == "2-28"){
+            }
+            else if (nPage == "2-28"){
                 nPage = "2-28_Incident"
-            };
-            if (nPage == "2-2-8"){
+            }
+            else if (nPage == "2-2-8"){
                 nPage = "2-28_Incident"
-            };
-            if (nPage == "228_Massacre"){
+            }
+            else if (nPage == "228_Massacre"){
                 nPage = "2-28_Incident"
-            };
-            if (nPage == "February_28_Massacre"){
+            }
+            else if (nPage == "February_28_Massacre"){
                 nPage = "2-28_Incident"
-            };
-            if (nPage == "February_28_Incident"){
+            }
+            else if (nPage == "February_28_Incident"){
                 nPage = "2-28_Incident"
-            };
-
-            if (nPage == "Cairo"){
+            }
+            else if (nPage == "General Assembly"){
+                nPage = "26th_General_Assembly_of_the_UN"
+            }
+            else if (nPage == "UN"){
+                nPage = "26th_General_Assembly_of_the_UN"
+            }
+            else if (nPage == "United_Nations"){
+                nPage = "26th_General_Assembly_of_the_UN"
+            }
+            else if (nPage == "1964"){
+                nPage = "1964_nuclear_weapons_test"
+            }
+            else if (nPage == "1973"){
+                nPage = "1973_oil_crisis"
+            }
+            else if (nPage == "Cairo"){
                 nPage = "Cairo_Conference"
-            };
-            if (nPage == "Formosa"){
+            }
+            else if (nPage == "Formosa"){
                 nPage = "Ilha_Formosa"
-            };
-            if (nPage == "Geography"){
+            }
+            else if (nPage == "Geography"){
                 nPage = "Geography_of_Taiwan"
-            };
-            if (nPage == "Japan"){
+            }
+            else if (nPage == "Japan"){
                 nPage = "Empire_of_Japan"
-            };
-            if (nPage == "Jinmen_island"){
+            }
+            else if (nPage == "Jinmen_island"){
                 nPage = "Kinmen"
-            };
-            if (nPage == "Kinmen_island"){
+            }
+            else if (nPage == "Kinmen_island"){
                 nPage = "Kinmen"
-            };
-            if (nPage == "ROC"){
+            }
+            else if (nPage == "ROC"){
                 nPage = "Republic_of_China"
-            };
-            if (nPage == "Shimonoseki"){
+            }
+            else if (nPage == "Shimonoseki"){
                 nPage = "Treaty_of_Shimonoseki"
-            };
-
-            alert("2")
-            alert(nPage)
+            }
             window.location.href = "pages/" + nPage + ".html";
         </script>
     </head>

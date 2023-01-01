@@ -95,5 +95,5 @@ function autocomplete(inp, arr) {
     });
 }
 
-const phrases = ["2-28 Incident", "February 28 Massacre", "Aborigines under Japanese Rule", "Cairo Conference", "Empire of Japan", "Japan", "Fujian", "Geography of Taiwan", "Ilha Formosa", "Formosa", "Kinmen island", "Republic of China", "Republic of Formosa", "Retrocession", "Taiwan Culture Society", "Treaty of Shimonoseki"];
+const phrases = ["2-28 Incident", "February 28 Massacre", "Aborigines under Japanese rule", "Cairo Conference", "Empire of Japan", "Japan", "Fujian", "Geography of Taiwan", "Ilha Formosa", "Formosa", "Kinmen island", "Republic of China", "Republic of Formosa", "Retrocession", "Taiwan Culture Society", "Treaty of Shimonoseki"];
 autocomplete(document.getElementById("SearchInput"), phrases);
