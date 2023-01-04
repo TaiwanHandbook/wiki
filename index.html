@@ -5,6 +5,14 @@
         <link rel="stylesheet" href="css/search1.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
+            body{
+                background-image: url("pages/images/front.jpg") ;
+                background-repeat: no-repeat;
+                background-size: cover; 
+                background-position: center;
+                background-attachment: fixed;
+            }
+
             #startB {
                 box-shadow: 0px 4px 13px -3px #5a7373;
                 background:linear-gradient(to bottom, #489fb5 5%, #82c0cc 100%);
@@ -33,10 +41,7 @@
             }
 
             #indHead{
-                background-image: url("pages/images/front1.jpg") ;
-                background-repeat: no-repeat;
-                background-size: cover; 
-                background-position: center;
+                background-color: transparent;
                 width: 100%;
                 height: 70vh;
                 display: flex;
@@ -71,6 +76,7 @@
                 padding: 5vw;
                 padding-right: 8vw;
                 padding-top: 4vh;
+                background-color: white;
             }
             h1{
                 font-size: 2.2vw;
@@ -106,7 +112,7 @@
     <body style="font-family: Georgia; overflow-y: scroll;">
         <div id="homeFlex" style="position:sticky; top: 0px;">
             <div id="homeFlex1">
-                <img src="pages/images/home.png" id="homeImg">
+                <img src="pages/images/home.png" id="homeImg" loading="lazy">
                 <a id="homeLink" href="index.html">Home</a>
                 <a id="homeLink" href="about.html">About</a>
                 <a id="homeLink" href="all.html">Glossary</a>
@@ -133,7 +139,7 @@
                     </div>
                 </div>
                 <div id="indHeadCaption">
-                    <p id="caption">Credit: <a style="color:white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;" href="https://www.reddit.com/r/CityPorn/comments/d23w5s/dystopian_taipei_nights_endless_neon_street_signs/" target="_blank">Steve Chin Photography</a></p>
+                    <p id="caption">Photo by: <a style="color:white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;" href="https://www.reddit.com/r/CityPorn/comments/d23w5s/dystopian_taipei_nights_endless_neon_street_signs/" target="_blank">Steve Chin Photography</a></p>
                 </div>
             </div>
             <div id="indBody">
@@ -155,7 +161,7 @@
                 }
 
             function guidePagesSetup(){
-                const pages = "Treaty_of_Shimonoseki,Empire_of_Japan,Retrocession,2-28_Incident,Nationalist_retreat,White_Terror,Land_to_the_Tiller,Hui,1964_nuclear_weapons_test,Kaohsiung_EPZ,Tangwai,Founding_of_the_DPP"
+                const pages = "Treaty_of_Shimonoseki,Empire_of_Japan,Retrocession,2-28_Incident,Nationalist_retreat,White_Terror,Land_to_the_Tiller,Hui,1964_nuclear_weapons_test,Kaohsiung_EPZ,Shanghai_Communiqué,Tangwai,Founding_of_the_DPP"
                 sessionStorage.setItem("currentPage", 1)
                 sessionStorage.setItem("Pages", pages)
                 sessionStorage.setItem("guide", 3)

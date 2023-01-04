@@ -51,3 +51,6 @@ function subInd(){
 function home(){
     window.location.href = "../index.html"
 }
+var myLazyLoad = new LazyLoad({
+    elements_selector: "#FlexImage"
+});
