@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>K. Y. Yin</title>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="../css/img-map.css">
+        <link rel="stylesheet" href="../css/progress.css">
+        <link rel="stylesheet" href="../css/search1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            var images = [""]
+            var credits = [""]
+            var map = true
+        </script>
+        <script src="../js/image.js"></script>
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
+    
+    <body>
+        <div id="homeFlex">
+            <div id="homeFlex1">
+                <a href="../index.html"><img src="images/home.png" id="homeImg" loading="lazy"></a>
+                <a id="homeLink" href="../index.html">Home</a>
+                <a id="homeLink" href="../about.html">About</a>
+                <a id="homeLink" href="../all.html">Glossary</a>
+                <a id="homeLink" href="../bibliography.html">Bibliography</a>
+                <a id="homeLink" href="../feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="../help.html">Help</a>
+                <a id="homeLinkPath" href="../redirect2.html" style="display: none;">Back to Guide Path</a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="../redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
+                </div>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="../js/searchbar.js"></script>
+        </div>
+        <div id="infodiv">
+            <div id="FlexCont">
+                <!--IMAGE HERE--><div id="FlexImage" style="background-image: url(images);">
+                    <span id="caption"><!-- IMAGE CAPTION --></span>
+                </div>
+                <!-- MAP HERE <iframe src="" id="map" width="40%" height="100%" style="border:0; display:none; z-index: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                <div id="FlexText">
+                    <div id="FlexContText">
+                        <h1 style="font-size: 2vw ;">K. Y. Yin</h1>
+                        <p>Yin Chung-jung (Chinese: 尹仲容; Pinyin: Yǐn Zhòngróng), also known as <b>K. Y. Yin</b> was a famous technocrat of the <a>ROC</a> who is credited as the architect of the economoc stabilisation program of the 1950s. He was granted high levels of autonomy <a>Chiang Kai-shek</a> to implement his policies, which allowed him to staff government agencies with other skilled technocrats who were able to rehabilitate Taiwan's economy and create a system where state run enterprises complemented the private sector.</p>
+                        <p>He served until his death in 1963, but his successor, K. T. Li (Chinese: 李國鼎; Pinyin: Lǐ Guódǐng) continued his work all the way until the 1980s, overseeing the liberalising of trade and setting Taiwan on a course of rapid economic development.</p>
+                        <br><hr>
+                        <!--<h2 style="font-size: 1.7vw ;">Related links</h2>
+                        <ul>
+                            <li><a href="#" onclick="redir('')"></a></li>
+                        </ul>
+                        <br><hr>-->
+                        <h2 style="font-size: 1.7vw ;">References</h2>
+                        <ol style="font-size: 1.1vw;">
+                            <li id="">Rigger, S. (2011). From Farmers to Manufacturers. In: Why Taiwan Matters. Rowman & Littlefield Publishers.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="progressFlex" style="display: none;">
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="prevPage()">◄</button>
+            <div id="progressbar"><div id="progress"><span id="progressSpan">42 / 100</span></div></div>
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="nextPage()">►</button>
+        </div>
+        <script src="../js/progress.js"></script>
+		<script src="../js/keys.js"></script>
+    </body>
+
+</html>

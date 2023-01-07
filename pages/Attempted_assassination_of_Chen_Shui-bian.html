@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Attempted assassination of Chen Shui-bian</title>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="../css/img-map.css">
+        <link rel="stylesheet" href="../css/progress.css">
+        <link rel="stylesheet" href="../css/search1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            var images = [""]
+            var credits = [""]
+            var map = true
+        </script>
+        <script src="../js/image.js"></script>
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
+    
+    <body>
+        <div id="homeFlex">
+            <div id="homeFlex1">
+                <a href="../index.html"><img src="images/home.png" id="homeImg" loading="lazy"></a>
+                <a id="homeLink" href="../index.html">Home</a>
+                <a id="homeLink" href="../about.html">About</a>
+                <a id="homeLink" href="../all.html">Glossary</a>
+                <a id="homeLink" href="../bibliography.html">Bibliography</a>
+                <a id="homeLink" href="../feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="../help.html">Help</a>
+                <a id="homeLinkPath" href="../redirect2.html" style="display: none;">Back to Guide Path</a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="../redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
+                </div>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="../js/searchbar.js"></script>
+        </div>
+        <div id="infodiv">
+            <div id="FlexCont">
+                <!--IMAGE HERE--><div id="FlexImage" style="background-image: url(images);">
+                    <span id="caption"><!-- IMAGE CAPTION --></span>
+                </div>
+                <!-- MAP HERE <iframe src="" id="map" width="40%" height="100%" style="border:0; display:none; z-index: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                <div id="FlexText">
+                    <div id="FlexContText">
+                        <h1 style="font-size: 2vw ;">Attempted assassination of Chen Shui-bian</h1>
+                        <p>An <b>assassination attempt</b> was carried out against <a>DPP</a> politicians <a>Chen Shui-bian</a> and his running mate <a>Anette Lu</a> the night before the <a>2004 presidential election</a>.</p>
+                        <p>Chen and Lu were touring the streets of <a>Tainan</a> in an open jeep, when they noticed that they had been shot in the chest and the knee respectively. Both of them recovered, but the shooter has not been identified since.</p>
+                        <p>Reactions from politicians and pundits were swift. <a>KMT</a> candidate Lien Chan expressed that ///. Some on the <a>pan-Blue</a> side made accusations that the shooting was deliberately set up with the intent to garner sympathy votes. Ironically these accusations caused an outrage that may have contributed to the DPP's victory.</p>
+                        <br><hr>
+                        <!--<h2 style="font-size: 1.7vw ;">Related links</h2>
+                        <ul>
+                            <li><a href="#" onclick="redir('')"></a></li>
+                        </ul>
+                        <br><hr>-->
+                        <h2 style="font-size: 1.7vw ;">References</h2>
+                        <ol style="font-size: 1.1vw;">
+                            <li id="">Rigger, S. (2011). From "Free China" to Democratic Taiwan. In: Why Taiwan Matters. Rowman & Littlefield Publishers.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="progressFlex" style="display: none;">
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="prevPage()">◄</button>
+            <div id="progressbar"><div id="progress"><span id="progressSpan">42 / 100</span></div></div>
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="nextPage()">►</button>
+        </div>
+        <script src="../js/progress.js"></script>
+		<script src="../js/keys.js"></script>
+    </body>
+
+</html>
