@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Economic Stabilisation Board</title>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="../css/img-map.css">
+        <link rel="stylesheet" href="../css/progress.css">
+        <link rel="stylesheet" href="../css/search1.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            var images = [""]
+            var credits = [""]
+            var map = false
+        </script>
+        <script src="../js/image.js"></script>
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
+    
+    <body>
+        <div id="homeFlex">
+            <div id="homeFlex1">
+                <a href="../index.html"><img src="images/home.png" id="homeImg" loading="lazy"></a>
+                <a id="homeLink" href="../index.html">Home</a>
+                <a id="homeLink" href="../about.html">About</a>
+                <a id="homeLink" href="../all.html">Glossary</a>
+                <a id="homeLink" href="../bibliography.html">Bibliography</a>
+                <a id="homeLink" href="../feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="../help.html">Help</a>
+                <a id="homeLinkPath" href="../redirect2.html" style="display: none;">Back to Guide Path</a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="../redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
+                </div>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="../js/searchbar.js"></script>
+        </div>
+        <div id="infodiv">
+            <div id="FlexCont">
+                <!--IMAGE HERE--><div id="FlexImage" style="background-image: url(images);">
+                    <span id="caption"><!-- IMAGE CAPTION --></span>
+                </div>
+                <!-- MAP HERE <iframe src="" id="map" width="40%" height="100%" style="border:0; display:none; z-index: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+                <div id="FlexText">
+                    <div id="FlexContText">
+                        <h1 style="font-size: 2vw ;">Economic Stabilisation Board</h1>
+                        <p>The <b>Economic Stabilisation Board</b> was a body established by the <a>ROC</a> government in 1951 with the purpose of coordinating trade and fiscal policies and rescuing Taiwan's collapsing economy. Following the <a>introduction of a new currency</a> and <a>extensive land reforms</a>, it carried out three four-year economic development plans starting in 1953, 1957 and 1961 respectively.</p>
+                        <p>The first of these stressed the development of electricity grids, which was a prerequisite for all further industrial developments, as well as textile and fertilizer production, as import substitution measures. The second elaborated on the first while emphasizing the development of heavy industry, national defense, and advanced technologies. By the 1960s, the ROC began the shift away from protectionsim to develop an export-oriented economy, which was heavily reflected in the third of the economic development plans.</p>
+                        <br><hr>
+                        <!--<h2 style="font-size: 1.7vw ;">Related links</h2>
+                        <ul>
+                            <li><a href="#" onclick="redir('')"></a></li>
+                        </ul>
+                        <br><hr>-->
+                        <h2 style="font-size: 1.7vw ;">References</h2>
+                        <ol style="font-size: 1.1vw;">
+                            <li id="">Wang, C. (2007). A Bastion Created, A Regime Reformed, An Economy Reengineered, 1949-1970. In: Taiwan: A New History. Routledge.</li>
+                            <li>Rigger, S. (2014). Why Taiwan matters: small island, global powerhouse. Lanham: Rowman & Littlefield.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="progressFlex" style="display: none;">
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="prevPage()">◄</button>
+            <div id="progressbar"><div id="progress"><span id="progressSpan">42 / 100</span></div></div>
+            <button style="width: 6%; height:100%; font-family: Georgia; font-size:x-large; background-color: #f8f8f8; border:1px solid;" onclick="nextPage()">►</button>
+        </div>
+        <script src="../js/progress.js"></script>
+		<script src="../js/keys.js"></script>
+    </body>
+
+</html>
