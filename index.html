@@ -110,7 +110,8 @@
     </script>
     
     <body style="font-family: Georgia; overflow-y: scroll;">
-        <div id="homeFlex" style="position:sticky; top: 0px;">
+        <div id="homeFlex"></div>
+        <div id="homeFlex" style="position:fixed; top: 0px;">
             <div id="homeFlex1">
                 <img src="pages/images/home.png" id="homeImg" loading="lazy">
                 <a id="homeLink" href="index.html">Home</a>
@@ -144,15 +145,15 @@
             </div>
             <div id="indBody">
                 <h1>Taiwan's Journey</h1>
-                <p>In his autobiography, Chen Shui-bian recalls that his mother, a poor farming tenant, would put him in a hole near the fields she worked, as a substitute for a playpen. Over the next 50 years, Chen managed to hoist himself from the hole in the ground to the top university of the country, to being the attorneys of leading pro-democracy politicians and activists, eventually winning the 2000 presidential election, becoming the first president of Taiwan from the Democratic Progressive Party, and signalling the end of the Kuomintang's hegemony.</p>
-                <p>In parallel, Taiwan, formally the Republic of China, was undergoing equivalent developments, both economically and politically. From an increasingly isolated, extremely repressive and authoritarian island nation, plagued by hiperinflation in the early 1950s, Taiwan has experienced some of the fastest economic growth and democratisation in history. It managed to transform itself into the most developed democracy of the region, and an essential cog of the international markets.</p>
+                <p>In his autobiography, Chen Shui-bian recalls that his mother, a poor farming tenant, would put him in a hole near the fields she worked, as a substitute for a playpen. Over the next 50 years Chen managed to hoist himself from the hole in the ground to the top university of the country, to being the attorneys of leading pro-democracy politicians and activists, eventually winning the 2000 presidential election, becoming the first president of Taiwan from the Democratic Progressive Party, and signalling the end of the Kuomintang's hegemony.</p>
+                <p>In parallel, Taiwan, formally the Republic of China, was undergoing equivalent developments both economically and politically. From an increasingly isolated, extremely repressive and authoritarian island nation plagued by hyperinflation in the early 1950s, Taiwan has experienced some of the fastest economic growth and democratisation in history. It managed to transform itself into the most developed democracy of the region, and an essential cog of the international markets.</p>
                 <p>Taiwan's case is truly exceptional. To learn about how Taiwan's economic and political miracle came to fruition, click the button below!</p>
                 <div style="display: flex; justify-content: center; width: 100%;">
                     <button onclick="guidePagesSetup()" id="startB">Start the Journey</button>
                 </div>
                 
                 <h2>How The Site Works</h2>
-                <p>This site is designed to familiarise you with the history, and political development of Taiwan in a brief but informative manner. You will be guided along a short path of pages, each describing a single aspect of Taiwanese history and how it contributed to its development. You have the opportunity to veer off this path and explore branches that interest you more by clicking the blue links in the text, or the ones under the "Related links" header at the bottom. Learn more by visiting the <a href="help.html">Help</a> and <a href="about.html">About</a> pages.</p>
+                <p>This site is designed to familiarise you with the history and political development of Taiwan in a brief but informative manner. You will be guided along a short path of pages, each describing a single aspect of Taiwanese history and how it contributed to its development. You have the opportunity to veer off this path and explore branches that interest you more by clicking the blue links in the text, or the ones under the "Related links" header at the bottom. Learn more by visiting the <a href="help.html">Help</a> and <a href="about.html">About</a> pages.</p>
             </div>
         </div>
         <script>
@@ -161,7 +162,7 @@
                 }
 
             function guidePagesSetup(){
-                const pages = "Treaty_of_Shimonoseki,Empire_of_Japan,Retrocession,2-28_Incident,Nationalist_retreat,White_Terror,Economic_Stabilisation_Board,Kaohsiung_EPZ,Ten_Major_Construction_Projects,Industrial_Technology_Research_Institute,UN_General_Assembly_Resolution_2758,Shanghai_Communiqué,Jimmy_Carter,Tangwai,Kaohsiung_Incident,Founding_of_the_DPP,Lifting_of_martial_law,Lee_Teng-hui,2000_presidential_election,Chen_Shui-bian,March_19_shooting,Ma_Ying-jeou,2016_general_election"
+                const pages = "Treaty_of_Shimonoseki,Empire_of_Japan,Retrocession,2-28_Incident,Nationalist_retreat,White_Terror,Economic_Stabilisation_Board,Kaohsiung_EPZ,Ten_Major_Construction_Projects,Industrial_Technology_Research_Institute,UN_General_Assembly_Resolution_2758,Shanghai_Communique,Jimmy_Carter,Tangwai,Kaohsiung_Incident,Founding_of_the_DPP,Lifting_of_martial_law,Lee_Teng-hui,2000_presidential_election,Chen_Shui-bian,March_19_shooting,Ma_Ying-jeou,2016_general_election"
                 sessionStorage.setItem("currentPage", 1)
                 sessionStorage.setItem("Pages", pages)
                 sessionStorage.setItem("guide", 3)
