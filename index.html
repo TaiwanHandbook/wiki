@@ -57,15 +57,50 @@
                 justify-content: center;
             }
             
-            #indHeadQuote{
-                width: 50%;
-                font-family: Georgia;
-                background-color: rgba(0,0,0,.8);
-                color: white;
-                margin-right: 30%;
-                margin-bottom: 4%;
-                padding: 3%;
-                z-index: -1;
+            @media (orientation: landscape) {
+                #indHeadQuote{
+                    width: 50%;
+                    font-family: Georgia;
+                    background-color: rgba(0,0,0,.8);
+                    color: white;
+                    margin-right: 30%;
+                    margin-bottom: 4%;
+                    padding: 3%;
+                    z-index: -1;
+                }
+                #QuoteText{
+                    font-size: 1.8vw; 
+                    margin-top: 0px; 
+                }
+                #QuoteCite{
+                    font-size: 1.3vw; 
+                    float:right; 
+                    padding-right:1vw; 
+                    margin-bottom: 0px;
+                }
+            }
+            
+            @media (orientation: portrait) {
+                #indHeadQuote{
+                    width: 70%;
+                    font-family: Georgia;
+                    background-color: rgba(0,0,0,.8);
+                    color: white;
+                    margin-right: 10%;
+                    margin-bottom: 4%;
+                    padding: 3%;
+                    z-index: -1;
+                }
+                #QuoteText{
+                    font-size: 5vw; 
+                    margin-top: 0px; 
+                }
+                #QuoteCite{
+                    font-size: 3vw; 
+                    float:right; 
+                    padding-right:1vh; 
+                    margin-bottom: 0px;
+                }
             }
             
             #indHeadCaption{
@@ -137,8 +172,8 @@
             <div id="indHead">
                 <div id="indHeadText">
                     <div id="indHeadQuote">
-                        <p style="font-size: 1.8vw; margin-top: 0px; ">"In the past half century, Taiwan's people rejected [their] status and stood up for themselves. In their determination to  claim a better future, they created one of the world's most successful economies and vibrant democracies."</p>
-                        <p style="font-size: 1.3vw; float:right; padding-right:1vw; margin-bottom: 0px;">— Shelley Rigger, <i>Why Taiwan Matters</i></p>
+                        <p id="QuoteText">"In the past half century, Taiwan's people rejected [their] status and stood up for themselves. In their determination to  claim a better future, they created one of the world's most successful economies and vibrant democracies."</p>
+                        <p id="QuoteCite">— Shelley Rigger, <i>Why Taiwan Matters</i></p>
                         <!--The story of how this tiny island–endowed with few natural resources and a small population–became a global powerhouse brings together politics, culture, economics... and a little luck.-->
                         <!--Democracy may be still a fresh element in island life, but Taiwanese have absorbed the culture. Manthorpe-->
                     </div>
