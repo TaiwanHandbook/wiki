@@ -101,44 +101,21 @@ input[type=text] {
   float: left;
 }
 
-@media screen and (orientation:portrait) {
-  #homeFlex {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content:space-between;
-    width: 100vw;
-    height: 5vh;
-    min-height: 50px;
-    flex-direction: row;
-    background-color: #fafafa;
-    border-bottom: 1px solid black;
-    z-index: 2;
-  }
-  #homeImg{
-    height: 5vh;
-    min-height: 50px;
-    object-fit: scale-down;
-    float: left;
-  }
+#homeFlex {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content:space-between;
+  width: 100vw;
+  height: 10vh;
+  min-height: 70px;
+  flex-direction: row;
+  background-color: #fafafa;
+  border-bottom: 1px solid black;
+  z-index: 2;
 }
-
-@media screen and (orientation:landscape) {
-  #homeFlex {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content:space-between;
-    width: 100vw;
-    height: 10vh;
-    min-height: 70px;
-    flex-direction: row;
-    background-color: #fafafa;
-    border-bottom: 1px solid black;
-    z-index: 2;
-  }
-  #homeImg{
-    height: 10vh;
-    min-height: 70px;
-    object-fit: scale-down;
-    float: left;
-}
+#homeImg{
+  height: 10vh;
+  min-height: 70px;
+  object-fit: scale-down;
+  float: left;
 }
