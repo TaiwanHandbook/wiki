@@ -1,12 +1,13 @@
 function refreshTheme(){
-    if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) || (sessionStorage.getItem("theme") == "light")) {
+    if ((sessionStorage.getItem("theme") == "light")) {
         document.getElementById('colMode').setAttribute('href', 'styleLight.css')
         document.getElementById('colModePage').setAttribute('href', '../styleLight.css')
     }
-    else if ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) || (sessionStorage.getItem("theme") == "dark")){
+    else if ((sessionStorage.getItem("theme") == "dark")){
         document.getElementById('colMode').setAttribute('href', 'styleDark.css')
         document.getElementById('colModePage').setAttribute('href', '../styleDark.css')
 }}
+// (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)
 
 function setNewTheme(newTheme){
     sessionStorage.setItem("theme", newTheme)

@@ -39,13 +39,6 @@ body{
     overflow: hidden;
 }
 
-.div{
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
-  object-fit: cover;
-}
-
 a {
   color: var(--linkUnvisited);
 }
@@ -54,7 +47,6 @@ a:visited {
 }
 
 * { box-sizing: border-box; }
-
 
 .autocomplete {
   /*the container must be positioned relative:*/
@@ -112,48 +104,6 @@ input[type=text] {
 
 
 @media (orientation: landscape) {
-  #progressButton{
-    width: 6%; 
-    height:100%; 
-    font-family: Georgia; 
-    font-size: x-large; 
-    background-color: var(--progButtonBackground); 
-    border:1px solid var(--progButtonOutline);
-    color: var(--progButtonArrow);
-  }
-  #progressFlex {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    width: 100%;
-    height: 5vh;
-    min-height: 40px;
-    overflow: hidden;
-    flex-direction: row;
-  }
-  #progressbar{
-    width: 100%;
-    height: 100%;
-    border-color: var(--progBarOutline);
-    border-width: 1px;
-    outline: var(--progBarOutline);
-    outline-width: 1px;
-    background-color: var(--progBarEmpty);
-  }
-  #progress{
-    width: 42%;
-    height: 100%;
-    background-color: var(--progBarFull);
-    color: var(--progBarText);
-    text-shadow: -1px -1px 0 var(--progBarTextShadow), 1px -1px 0 var(--progBarTextShadow), -1px 1px 0 var(--progBarTextShadow), 1px 1px 0 var(--progBarTextShadow);
-    font-size: larger;
-    text-align: center;
-  }
-  #progressSpan{
-    font-family: Georgia;
-  }
-
   
   #homeFlex1{
     display: flex;
@@ -205,6 +155,52 @@ input[type=text] {
     object-fit: scale-down;
     float: left;
   }
+
+
+  
+  #progressFlex {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    height: 5vh;
+    min-height: 40px;
+    overflow: hidden;
+    flex-direction: row;
+  }
+  #progressbar{
+    width: 100%;
+    height: 100%;
+    border-color: var(--progBarOutline);
+    border-width: 1px;
+    outline: var(--progBarOutline);
+    outline-width: 1px;
+    background-color: var(--progBarEmpty);
+  }
+  #progress{
+    width: 42%;
+    height: 100%;
+    background-color: var(--progBarFull);
+    color: var(--progBarText);
+    text-shadow: -1px -1px 0 var(--progBarTextShadow), 1px -1px 0 var(--progBarTextShadow), -1px 1px 0 var(--progBarTextShadow), 1px 1px 0 var(--progBarTextShadow);
+    font-size: larger;
+    text-align: center;
+  }
+  #progressSpan{
+    font-family: Georgia;
+  }
+  #progressButton{
+    width: 6%; 
+    height:100%; 
+    font-family: Georgia; 
+    font-size:x-large; 
+    background-color: var(--progButtonBackground); 
+    border:1px solid var(--progButtonOutline);
+    color: var(--progButtonArrow);
+  }
+
+
   
   #FlexCont {
     display: flex;
@@ -294,48 +290,6 @@ input[type=text] {
 
 
 @media (orientation: portrait) {
-  #progressButton{
-    width: 12%; 
-    height:100%; 
-    font-family: Georgia; 
-    font-size: xx-large; 
-    background-color: var(--progButtonBackground); 
-    border:1px solid var(--progButtonOutline);
-    color: var(--progButtonArrow);
-  }
-  #progressFlex {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: flex-start;
-    align-content: flex-start;
-    width: 100%;
-    height: 5vh;
-    min-height: 40px;
-    overflow: hidden;
-    flex-direction: row;
-  }
-  #progressbar{
-    width: 100%;
-    height: 100%;
-    border-color: var(--progBarOutline);
-    border-width: 1px;
-    outline: var(--progBarOutline);
-    outline-width: 1px;
-    background-color: var(--progBarEmpty);
-  }
-  #progress{
-    width: 42%;
-    height: 100%;
-    background-color: var(--progBarFull);
-    color: var(--progBarText);
-    text-shadow: -1px -1px 0 var(--progBarTextShadow), 1px -1px 0 var(--progBarTextShadow), -1px 1px 0 var(--progBarTextShadow), 1px 1px 0 var(--progBarTextShadow);
-    font-size: larger;
-    text-align: center;
-  }
-  #progressSpan{
-    font-family: Georgia;
-  }
-  
   #homeFlex1{
     display: flex;
     width: 70vw;
@@ -384,6 +338,52 @@ input[type=text] {
     float: left;
     padding-right: 20px;
   }
+
+
+  
+  #progressFlex {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    height: 5vh;
+    min-height: 40px;
+    overflow: hidden;
+    flex-direction: row;
+  }
+  #progressbar{
+    width: 100%;
+    height: 100%;
+    border-color: var(--progBarOutline);
+    border-width: 1px;
+    outline: var(--progBarOutline);
+    outline-width: 1px;
+    background-color: var(--progBarEmpty);
+  }
+  #progress{
+    width: 42%;
+    height: 100%;
+    background-color: var(--progBarFull);
+    color: var(--progBarText);
+    text-shadow: -1px -1px 0 var(--progBarTextShadow), 1px -1px 0 var(--progBarTextShadow), -1px 1px 0 var(--progBarTextShadow), 1px 1px 0 var(--progBarTextShadow);
+    font-size: larger;
+    text-align: center;
+  }
+  #progressSpan{
+    font-family: Georgia;
+  }
+  #progressButton{
+    width: 12%; 
+    height:100%; 
+    font-family: Georgia; 
+    font-size:xx-large; 
+    background-color: var(--progButtonBackground); 
+    border:1px solid var(--progButtonOutline);
+    color: var(--progButtonArrow);
+  }
+
+
   
   #FlexCont {
     display: flex;
