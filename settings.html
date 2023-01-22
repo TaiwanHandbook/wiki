@@ -1,17 +1,13 @@
 <html>
-
-    <script>
-        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSebnMFUbWvudvJyEefeWTPsmnWYKT5a-JMDLHtZMy4B1zpa1g/viewform?usp=sf_link"
-    </script>
-    
     <head>
-        <title>Feedback</title>
+        <title>Settings</title>
         <link rel="icon" href="pages/images/icon.png">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" id="colMode" href="styleLight.css">
         <link rel="stylesheet" id="colModePage" href="../styleLight.css">
         <script src="js/theme.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
     </head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
@@ -22,16 +18,20 @@
     
       gtag('config', 'G-HPSHZS2ENV');
     </script>
-    <!--<body style="font-family: Georgia;">
-        <div id="homeFlex">
+    
+    <body style="font-family:Georgia; overflow-y:scroll">
+        <div id="homeFlex"></div>
+        <div id="homeFlex" style="position:fixed; top: 0px;">
             <div id="homeFlex1">
                 <a href="index.html"><img src="pages/images/home.png" id="homeImg" loading="lazy"></a>
                 <a id="homeLink" href="index.html">Home</a>
+                <a id="homeLink" href="#" onclick="guidePagesSetup()">Start</a>
                 <a id="homeLink" href="about.html">About</a>
                 <a id="homeLink" href="all.html">Glossary</a>
                 <a id="homeLink" href="bibliography.html">Bibliography</a>
                 <a id="homeLink" href="feedback.html" target="_blank">Feedback</a>
                 <a id="homeLink" href="help.html">Help</a>
+                <a id="homeLink" href="settings.html"><span class="fa fa-gear"></span></a>
             </div>
             <form id="homeFlex2" autocomplete="off" action="redirect.html">
                 <div class="autocomplete">
@@ -41,9 +41,16 @@
             </form>
             <script src="js/searchbar.js"></script>
         </div>
-        <div style="width: 100%; height:90vh; ">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSebnMFUbWvudvJyEefeWTPsmnWYKT5a-JMDLHtZMy4B1zpa1g/viewform?embedded=true" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+        
+        <div style="padding-left:5vw; padding-right:7vw; padding-top: 2vh; padding-bottom: 2vh">
+            <h1 style="font-size: 48px;">Settings</h1>
+            <div style="position: relative; left: 3.3vw">
+                <h2 style="font-size: 40px;">Theme</h2>
+                <ul style="font-size: 30px;">
+                    <li><a href="#" style="color: var(--linkUnvisited);" onclick="setNewTheme('light')">Light theme</a></li>
+                    <li><a href="#" style="color: var(--linkUnvisited);" onclick="setNewTheme('dark')">Dark theme</a></li>
+                </ul>
+            </div>
         </div>
     </body>
--->
 </html>

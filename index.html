@@ -2,7 +2,10 @@
     <head>
         <title>Taiwan Handbook</title>
         <link rel="icon" href="pages/images/icon.png">
-        <link rel="stylesheet" href="css/search1.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" id="colMode" href="styleLight.css">
+        <link rel="stylesheet" id="colModePage" href="../styleLight.css">
+        <script src="js/theme.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             body{
@@ -114,7 +117,7 @@
                 padding: 5vw;
                 padding-right: 8vw;
                 padding-top: 4vh;
-                background-color: white;
+                background-color: var(--bodyBackground);
                 z-index: 2;
             }
             h1{
@@ -131,7 +134,7 @@
                 vertical-align: text-bottom;
                 color: white;
                 text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-                font-size: 22px;
+                font-size: 18px;
                 font-family: Georgia;
                 padding-right: 1vw;
                 margin-bottom: 4px;
@@ -153,12 +156,14 @@
         <div id="homeFlex" style="position:fixed; top: 0px;">
             <div id="homeFlex1">
                 <img src="pages/images/home.png" id="homeImg" loading="lazy">
-                <a id="homeLink" href="index.html">Home</a>
+                <a id="homeLink" href="#" onclick="guidePagesSetup()">Start</a>
                 <a id="homeLink" href="about.html">About</a>
                 <a id="homeLink" href="all.html">Glossary</a>
                 <a id="homeLink" href="bibliography.html">Bibliography</a>
                 <a id="homeLink" href="feedback.html" target="_blank">Feedback</a>
                 <a id="homeLink" href="help.html">Help</a>
+                <a id="homeLink" href="settings.html"><span class="fa fa-gear"></span></a>
+                <a id="homeSettings"></a>
             </div>
             <form id="homeFlex2" autocomplete="off" action="redirect.html">
                 <div class="autocomplete">
@@ -185,7 +190,7 @@
             <div id="indBody">
                 <h1>Taiwan's Journey</h1>
                 <p>In 1949, when the Chinese Civil War concluded with the Communists expelling the Nationalists to Taiwan, the island was desolate, ravaged by hyperinflation, famine and disease, with most of its valuable assets having been seized and shipped to the Mainland to aid the war effort. In the years following, a dictatorial and ruthlessly repressive regime entrenched itself, instituting martial law, banning opposition parties and silencing all who spoke out against it.</p>
-                <p>In the little over seven decades since then, Taiwan has transformed itself into the most developed democracy of the region, consistently rated as being among the freest and most democratic countries globally. It had also become an essential cog of the international markets, hosting several IT giants manufacturing a lion’s share of the semiconductors and advanced microchips of the world.</p>
+                <p>However, in the little over seven decades since then, Taiwan has transformed itself into the most developed democracy of the region, consistently rated as being among the freest and most democratic countries globally. It had also become an essential cog of the international markets, hosting several IT giants manufacturing a lion’s share of the semiconductors and advanced microchips of the world.</p>
                 <p>Taiwan's case is truly exceptional. To learn about how Taiwan's economic and political miracle came to fruition, click the button below!</p>
                 <div style="display: flex; justify-content: center; width: 100%;">
                     <button onclick="guidePagesSetup()" id="startB">Start the Journey</button>
@@ -195,18 +200,5 @@
                 <p>This site is designed to familiarise you with the history and political development of Taiwan in a brief but informative manner. You will be guided along a short path of pages, each describing a single aspect of Taiwanese history and how it contributed to its development. You have the opportunity to veer off this path and explore branches that interest you more by clicking the blue links in the text, or the ones under the "Related links" header at the bottom. Learn more by visiting the <a href="help.html">Help</a> and <a href="about.html">About</a> pages.</p>
             </div>
         </div>
-        <script>
-            window.onload = function guideDef() {
-                sessionStorage.setItem("guide", 0)
-                }
-
-            function guidePagesSetup(){
-                const pages = "Treaty_of_Shimonoseki,Empire_of_Japan,Retrocession,2-28_Incident,Nationalist_retreat,White_Terror,Economic_Stabilisation_Board,Kaohsiung_EPZ,Ten_Major_Construction_Projects,Industrial_Technology_Research_Institute,UN_General_Assembly_Resolution_2758,Shanghai_Communique,Jimmy_Carter,Tangwai,Kaohsiung_Incident,Founding_of_the_DPP,Lifting_of_martial_law,Lee_Teng-hui,2000_presidential_election,Chen_Shui-bian,March_19_shooting,Ma_Ying-jeou,2016_general_election"
-                sessionStorage.setItem("currentPage", 1)
-                sessionStorage.setItem("Pages", pages)
-                sessionStorage.setItem("guide", 3)
-                window.location.href = "pages/" + pages.split(",")[0] + ".html"
-            }
-        </script>
     </body>
 </html>

@@ -2,6 +2,8 @@
     <head>
         <title>Glossary</title>
         <link rel="icon" href="pages/images/icon.png">
+        <link rel="stylesheet" href="css/vars.css">
+        <script src="js/theme.js"></script>
         <link rel="stylesheet" href="css/search1.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -21,11 +23,13 @@
             <div id="homeFlex1">
                 <a href="index.html"><img src="pages/images/home.png" id="homeImg" loading="lazy"></a>
                 <a id="homeLink" href="index.html">Home</a>
+                <a id="homeLink" href="#" onclick="guidePagesSetup()">Start</a>
                 <a id="homeLink" href="about.html">About</a>
                 <a id="homeLink" href="all.html">Glossary</a>
                 <a id="homeLink" href="bibliography.html">Bibliography</a>
                 <a id="homeLink" href="feedback.html" target="_blank">Feedback</a>
                 <a id="homeLink" href="help.html">Help</a>
+                <a id="homeLink" href="settings.html"><span class="fa fa-gear"></span></a>
             </div>
             <form id="homeFlex2" autocomplete="off" action="redirect.html">
                 <div class="autocomplete">
@@ -38,11 +42,11 @@
         <div style="padding-left:5vw; padding-right:7vw; padding-top: 2vh; padding-bottom: 2vh">
             <h1 style="position: relative; right:10px">Glossary</h1>
             <ol style="font-size: 18px;">
-                <li><a style="color:blue" href="all.html">Full Glossary</a></li>
-                <li><a style="color:blue" href="events.html">Events</a></li>
-                <li><a style="color:#551A8B" href="treaties.html">Laws, treaties and agreements</a></li>
-                <li><a style="color:blue" href="people.html">People</a></li>
-                <li><a style="color:blue" href="misc.html">Miscellaneous</a></li>
+                <li><a style="color:var(--linkUnvisited)" href="all.html">Full Glossary</a></li>
+                <li><a style="color:var(--linkUnvisited)" href="events.html">Events</a></li>
+                <li><a style="color:var(--linkVisited)" href="treaties.html">Laws, treaties and agreements</a></li>
+                <li><a style="color:var(--linkUnvisited)" href="people.html">People</a></li>
+                <li><a style="color:var(--linkUnvisited)" href="misc.html">Miscellaneous</a></li>
             </ol>
             <br>
             <ul>

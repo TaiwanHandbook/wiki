@@ -2,7 +2,10 @@
     <head>
         <title>Help</title>
         <link rel="icon" href="pages/images/icon.png">
-        <link rel="stylesheet" href="css/search1.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" id="colMode" href="styleLight.css">
+        <link rel="stylesheet" id="colModePage" href="../styleLight.css">
+        <script src="js/theme.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             body{
@@ -53,11 +56,13 @@
             <div id="homeFlex1">
                 <a href="index.html"><img src="pages/images/home.png" id="homeImg" loading="lazy"></a>
                 <a id="homeLink" href="index.html">Home</a>
+                <a id="homeLink" href="#" onclick="guidePagesSetup()">Start</a>
                 <a id="homeLink" href="about.html">About</a>
                 <a id="homeLink" href="all.html">Glossary</a>
                 <a id="homeLink" href="bibliography.html">Bibliography</a>
                 <a id="homeLink" href="feedback.html" target="_blank">Feedback</a>
                 <a id="homeLink" href="help.html">Help</a>
+                <a id="homeLink" href="settings.html"><span class="fa fa-gear"></span></a>
             </div>
             <form id="homeFlex2" autocomplete="off" action="redirect.html">
                 <div class="autocomplete">
@@ -71,9 +76,9 @@
             <h1 style="font-size: 20px; font-family: Georgia; padding: 3vh">This page illustrates how to navigate the site. Check the <a href="about.html">About</a> page for further information.</h1>
             
             <ol style="font-size: 18px; padding-left: 5vw">
-                <li><a style="color:blue" href="#controls">Controls</a></li>
-                <li><a style="color:blue" href="#romanisation">On Romanisation</a></li>
-                <!--<li><a style="color:blue" href="faq">FAQ</a></li>-->
+                <li><a style="color:var(--linkUnvisited)" href="#controls">Controls</a></li>
+                <li><a style="color:var(--linkUnvisited)" href="#romanisation">On Romanisation</a></li>
+                <!--<li><a style="color:var(--linkUnvisited)" href="faq">FAQ</a></li>-->
             </ol>
             <br><hr>
 

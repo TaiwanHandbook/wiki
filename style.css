@@ -1,0 +1,472 @@
+:root {
+  --bodyBackground: var(--Background);
+  --bodyTextColor: var(--Text);
+
+  --progBarOutline: var(--Border);
+  --progBarEmpty: var(--Foreground);
+  --progBarFull: var(--Highlight);
+  --progBarText: #ffffff;
+  --progBarTextShadow: #000000;
+  --progButtonBackground: var(--Middleground);
+  --progButtonOutline: var(--Border);
+  --progButtonArrow: var(--Text);
+
+  --imgBackground: var(--Background);
+  --imgText: var(--Text);
+  --imgCaptionColor: #ffffff;
+  --imgCaptionShadow: #000000;
+
+  --searchHomeLink: var(--Highlight);
+  --searchRibbon: var(--Middleground);
+  --searchRibbonBorder: var(--Border);
+  --searchButtonBackground: var(--Highlight);
+  --searchButtonLogo: var(--Middleground);
+  --searchBoxBorder: var(--SearchBoxBorder);
+  --searchBoxBackground: var(--SearchBox);
+  --searchBoxText: var(--Text);
+  --searchBoxAutoBorder: var(--SearchBoxBorder);
+  --searchBoxAutoBackground: var(--SearchBox);
+  --searchBoxAutoText: var(--Text);
+  --searchBoxAutoActive: var(--Text);
+
+}
+
+body{
+    background-color: var(--bodyBackground);
+    color: var(--bodyTextColor);
+    margin: 0px;
+    height: 100%; 
+    overflow: hidden;
+}
+
+.div{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  object-fit: cover;
+}
+
+a {
+  color: var(--linkUnvisited);
+}
+a:visited {
+  color: var(--linkVisited);
+}
+
+* { box-sizing: border-box; }
+
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+input {
+  border: 2px solid var(--searchBoxBorder);
+  padding: 0.625vw;
+  font-size: 1.1vw;
+}
+input[type=text] {
+  background-color: var(--searchBoxBackground);
+  color: var(--searchBoxText);
+  width: 16vw;
+  height: 3vw;
+  min-width: 140px;
+  min-height: 40px;
+  font-family: Georgia;
+}
+#searchButton {
+  background-color: var(--searchButtonBackground);
+  color: var(--searchButtonLogo);
+  width: 3vw;
+  height: 3vw;
+  min-width: 40px;
+  min-height: 40px;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid var(--searchBoxAutoBorder);
+  color: var(--searchBoxAutoText);
+  border-bottom: none;
+  border-top: none;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 0.7vw;
+  cursor: pointer;
+  background-color: var(--searchBoxAutoBackground);
+  border-bottom: 1px solid var(--searchBoxAutoBorder);
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: var(--searchBoxAutoHover);
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: var(--searchBoxAutoActiveBackground) !important;
+  color: var(--searchBoxAutoActive);
+}
+
+
+@media (orientation: landscape) {
+  #progressButton{
+    width: 6%; 
+    height:100%; 
+    font-family: Georgia; 
+    font-size: x-large; 
+    background-color: var(--progButtonBackground); 
+    border:1px solid var(--progButtonOutline);
+    color: var(--progButtonArrow);
+  }
+  #progressFlex {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    height: 5vh;
+    min-height: 40px;
+    overflow: hidden;
+    flex-direction: row;
+  }
+  #progressbar{
+    width: 100%;
+    height: 100%;
+    border-color: var(--progBarOutline);
+    border-width: 1px;
+    outline: var(--progBarOutline);
+    outline-width: 1px;
+    background-color: var(--progBarEmpty);
+  }
+  #progress{
+    width: 42%;
+    height: 100%;
+    background-color: var(--progBarFull);
+    color: var(--progBarText);
+    text-shadow: -1px -1px 0 var(--progBarTextShadow), 1px -1px 0 var(--progBarTextShadow), -1px 1px 0 var(--progBarTextShadow), 1px 1px 0 var(--progBarTextShadow);
+    font-size: larger;
+    text-align: center;
+  }
+  #progressSpan{
+    font-family: Georgia;
+  }
+
+  
+  #homeFlex1{
+    display: flex;
+    width: 70vw;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items:center;
+  }
+  #homeFlex2{
+    width: 25vw;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    padding-right: 2vw;
+  }
+
+  #homeLink{
+    position: relative;
+    top: 5px;
+    color: var(--searchHomeLink);
+    font-size: 1.5vw;
+  }
+  #homeLinkPath{
+    position: relative;
+    top: 5px;
+    color: var(--searchHomeLink);
+    font-size: 1.7vw;
+  }
+
+  #homeFlex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content:space-between;
+    width: 100vw;
+    height: 10vh;
+    min-height: 70px;
+    flex-direction: row;
+    background-color: var(--searchRibbon);
+    border-bottom: 1px solid var(--searchRibbonBorder);
+    z-index: 2;
+  }
+  #homeImg{
+    height: 10vh;
+    min-height: 70px;
+    object-fit: scale-down;
+    float: left;
+  }
+  
+  #FlexCont {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    height: 100%;
+    overflow:-moz-hidden-unscrollable;
+    flex-direction: row;
+    background-color: var(--imgBackground);
+  }
+  #FlexContText{
+    text-align: justify;
+    text-justify: inter-word;
+    padding-right: 3vw;
+    padding-left: 3vw;
+  }
+  #FlexImage{
+    width: 40%;
+    max-width: 40%;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: justify;
+  }
+  #FlexText{
+    width: 60%;
+    max-width: 60%;
+    height: 94%;
+    margin: 1%;
+    background-color: var(--imgBackground);
+    float: right;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: var(--imgText);
+  }
+  #FlexContText{
+    font-size: 24px;
+    font-family: Georgia;
+  }
+  #img1 {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  }
+  #caption{
+    position: relative;
+    left: 1vw;
+    bottom: 1vh;
+    width: 35vw;
+    vertical-align: text-bottom;
+    color: var(--imgCaptionColor);
+    text-shadow: -1px -1px 0 var(--imgCaptionShadow), 1px -1px 0 var(--imgCaptionShadow), -1px 1px 0 var(--imgCaptionShadow), 1px 1px 0 var(--imgCaptionShadow);
+    font-size: 1vw;
+    font-family: Georgia;
+  }
+  #map{
+    width: 40%;
+    height: 100%;
+    border:0; 
+    display:none; 
+    z-index: 0
+  }
+  #textTitle{
+    font-size: 35px;
+    text-align: left;
+  }
+  #textRelated{
+    font-size: 33px;
+  }
+  #textRefs{
+    font-size: 33px;
+  }
+  #textRefsList{
+    font-size: 18px;
+    text-align: left;
+  }
+}
+
+
+@media (orientation: portrait) {
+  #progressButton{
+    width: 12%; 
+    height:100%; 
+    font-family: Georgia; 
+    font-size: xx-large; 
+    background-color: var(--progButtonBackground); 
+    border:1px solid var(--progButtonOutline);
+    color: var(--progButtonArrow);
+  }
+  #progressFlex {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    height: 5vh;
+    min-height: 40px;
+    overflow: hidden;
+    flex-direction: row;
+  }
+  #progressbar{
+    width: 100%;
+    height: 100%;
+    border-color: var(--progBarOutline);
+    border-width: 1px;
+    outline: var(--progBarOutline);
+    outline-width: 1px;
+    background-color: var(--progBarEmpty);
+  }
+  #progress{
+    width: 42%;
+    height: 100%;
+    background-color: var(--progBarFull);
+    color: var(--progBarText);
+    text-shadow: -1px -1px 0 var(--progBarTextShadow), 1px -1px 0 var(--progBarTextShadow), -1px 1px 0 var(--progBarTextShadow), 1px 1px 0 var(--progBarTextShadow);
+    font-size: larger;
+    text-align: center;
+  }
+  #progressSpan{
+    font-family: Georgia;
+  }
+  
+  #homeFlex1{
+    display: flex;
+    width: 70vw;
+    height: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items:center;
+  }
+  #homeFlex2{
+    display: none;
+  }
+
+  #homeLink{
+    position: relative;
+    top: 5px;
+    color: var(--searchHomeLink);
+    font-size: 2.5vh;
+    padding-right: 20px;
+  }
+  #homeLinkPath{
+    position: relative;
+    top: 5px;
+    color: var(--searchHomeLink);
+    font-size: 2.8vh;
+    padding-right: 20px;
+  }
+
+  #homeFlex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100vw;
+    height: 10vh;
+    min-height: 50px;
+    flex-direction: row;
+    background-color: var(--searchRibbon);
+    border-bottom: 1px solid var(--searchRibbonBorder);
+    z-index: 2;
+  }
+  #homeImg{
+    height: 5vh;
+    min-height: 30px;
+    object-fit: scale-down;
+    float: left;
+    padding-right: 20px;
+  }
+  
+  #FlexCont {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 100%;
+    height: 100%;
+    overflow:-moz-hidden-unscrollable;
+    flex-direction: column;
+    background-color: var(--imgBackground);
+  }
+  #FlexContText{
+    text-align: justify;
+    text-justify: inter-word;
+    padding-right: 3vw;
+    padding-left: 3vw;
+  }
+  #FlexImage{
+    width: 100%;
+    max-width: 100%;
+    height: 30%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: justify;
+  }
+  #FlexText{
+    width: 100%;
+    max-width: 100%;
+    height: 70%;
+    margin: 1%;
+    background-color: var(--imgBackground);
+    float: right;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: var(--imgText);
+  }
+  #FlexContText{
+    font-size: 34px;
+    font-family: Georgia;
+  }
+  #img1 {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+  }
+  #caption{
+    position: relative;
+    left: 1vw;
+    bottom: 0.6vh;
+    width: 90%;
+    vertical-align: text-bottom;
+    color: var(--imgCaptionColor);
+    text-shadow: -1px -1px 0 var(--imgCaptionShadow), 1px -1px 0 var(--imgCaptionShadow), -1px 1px 0 var(--imgCaptionShadow), 1px 1px 0 var(--imgCaptionShadow);
+    font-size: 1.4vh;
+    font-family: Georgia;
+  }
+  #map{
+    width: 100%;
+    height: 30%;
+    border:0; 
+    display:none; 
+    z-index: 0
+  }
+  #textTitle{
+    font-size: 50px;
+    text-align: left;
+  }
+  #textRelated{
+    font-size: 40px;
+  }
+  #textRefs{
+    font-size: 40px;
+  }
+  #textRefsList{
+    font-size: 22px;
+    text-align: left;
+  }
+}

@@ -1,0 +1,14 @@
+:root {
+  --Background: #1e1e1e;
+  --Middleground: #252526;
+  --Foreground: #2d2d30;
+  --Border: #eeeeee;
+  --Text: #c9c9c9;
+  --Highlight: #008ae6;
+  --SearchBox: #2f2f2f;
+  --SearchBoxBorder: #404040;
+  --linkUnvisited: #008ae6;
+  --linkVisited: #007acc;
+  --searchBoxAutoHover: #282828;
+  --searchBoxAutoActiveBackground: #232323;
+}
