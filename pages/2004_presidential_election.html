@@ -3,8 +3,7 @@
         <title>2004 presidential election</title>
         <link rel="icon" href="images/icon.png">
         <link rel="stylesheet" href="../style.css">
-        <link rel="stylesheet" id="colMode" href="styleLight.css">
-        <link rel="stylesheet" id="colModePage" href="../styleLight.css">
+        <link rel="stylesheet" id="colMode" href="../styleLight.css">
         <script src="../js/theme.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -47,6 +46,7 @@
             </form>
             <script src="../js/searchbar.js"></script>
         </div>
+        <script>if ((sessionStorage.getItem("theme") == "dark")){document.getElementById('homeImg').setAttribute('src', 'images/homeDark.png')} else {document.getElementById('homeImg').setAttribute('src', 'images/home.png')}</script>
         <div id="infodiv">
             <div id="FlexCont">
                 <!--IMAGE HERE--><div id="FlexImage" style="background-image: url(images);">

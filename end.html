@@ -4,7 +4,6 @@
         <link rel="icon" href="pages/images/icon.png">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" id="colMode" href="styleLight.css">
-        <link rel="stylesheet" id="colModePage" href="../styleLight.css">
         <script src="js/theme.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -39,6 +38,7 @@
             </form>
             <script src="js/searchbar.js"></script>
         </div>
+        <script>if ((sessionStorage.getItem("theme") == "dark")){document.getElementById('homeImg').setAttribute('src', 'pages/images/homeDark.png')} else {document.getElementById('homeImg').setAttribute('src', 'pages/images/home.png')}</script>
         <div style="font-size: 24px; text-align: justify; padding: 2vw; margin: 0 auto; padding-left: 3vw; padding-right: 4vw; display: grid; grid-template-columns: 25vw 1fr; gap: 3vw;">
             <img src="pages/images/end.jpg" loading="lazy" style="width: 25vw; height:auto; display:inline">
             <div style="display: inline;">

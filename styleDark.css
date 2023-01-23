@@ -8,7 +8,7 @@
   --SearchBox: #2f2f2f;
   --SearchBoxBorder: #404040;
   --linkUnvisited: #008ae6;
-  --linkVisited: #007acc;
+  --linkVisited: hsl(204, 70%, 34%);
   --searchBoxAutoHover: #282828;
   --searchBoxAutoActiveBackground: #232323;
 }

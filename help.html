@@ -4,20 +4,17 @@
         <link rel="icon" href="pages/images/icon.png">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" id="colMode" href="styleLight.css">
-        <link rel="stylesheet" id="colModePage" href="../styleLight.css">
         <script src="js/theme.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
             body{
                 overflow-y: scroll;
             }
-            #helprow{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-start;
-                width: 100%;
-                padding: 3vw;
+            #controls{
+                font-size: 40px; 
+                font-family: Georgia; 
+                padding-left: 3vw; 
+                padding-top:2vh
             }
             #helpcol{
                 display: flex;
@@ -27,16 +24,59 @@
                 height: 100%;
 
             }
-            #helpimg{
-                width: 40vw;
-                height: auto;
+            
+            @media (orientation: landscape) {
+                #helprow{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    width: 100%;
+                    padding: 3vw;
+                    margin-bottom: 200px;
+                }
+                #helprow2{
+                    display: none;
+                }
+                #helpimg{
+                    width: 40vw;
+                    height: auto;
+                }
+                #helptext{
+                    width: 40vw;
+                    font-size: 30px;
+                    height: auto;
+                    margin-bottom: 90px;
+                    font-family: Georgia;
+                    text-align: justify;
+                }
             }
-            #helptext{
-                width: 40vw;
-                font-size: 24px;
-                height: 10vw;
-                font-family: Georgia;
-                text-align: justify;
+            
+            @media (orientation: portrait) {
+                #helprow{
+                    display: none;
+                }
+                #helprow2{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: 3vw;
+                    margin-bottom: 200px;
+                }
+                #helpimg{
+                    width: 80vw;
+                    height: auto;
+                }
+                #helptext{
+                    width: 80vw;
+                    font-size: 45px;
+                    height: auto;
+                    margin-bottom: 90px;
+                    font-family: Georgia;
+                    text-align: justify;
+                }
             }
         </style>
     </head>
@@ -72,18 +112,19 @@
             </form>
             <script src="js/searchbar.js"></script>
         </div>
+        <script>if ((sessionStorage.getItem("theme") == "dark")){document.getElementById('homeImg').setAttribute('src', 'pages/images/homeDark.png')} else {document.getElementById('homeImg').setAttribute('src', 'pages/images/home.png')}</script>
         <div>
-            <h1 style="font-size: 20px; font-family: Georgia; padding: 3vh">This page illustrates how to navigate the site. Check the <a href="about.html">About</a> page for further information.</h1>
+            <h1 style="font-size: 35px; font-family: Georgia; padding: 3vh">This page illustrates how to navigate the site. Check the <a href="about.html">About</a> page for further information.</h1>
             
-            <ol style="font-size: 18px; padding-left: 75px">
+            <ol style="font-size: 30px; padding-left: 75px">
                 <li><a style="color:var(--linkUnvisited)" href="#controls">Controls</a></li>
                 <li><a style="color:var(--linkUnvisited)" href="#romanisation">On Romanisation</a></li>
                 <!--<li><a style="color:var(--linkUnvisited)" href="faq">FAQ</a></li>-->
             </ol>
             <br><hr>
 
-            <h1 id="controls" style="font-size: 40px; font-family: Georgia; padding-left: 3vw; padding-top:2vh">Controls</h1>
-            <div id="helprow" style="margin-bottom: 200px;">
+            <h1 id="controls">Controls</h1>
+            <div id="helprow">
                 <div id="helpcol">
                     <img id="helpimg" src="help/help1.png">
                     <h1 id="helptext">Click on the logo or the ”Home” link in the top ribbon to access the home page</h1>
@@ -108,9 +149,32 @@
                 </div>
             </div>
             
+
+            <div id="helprow2">
+                <img id="helpimg" src="help/help1.png">
+                <h1 id="helptext">Click on the logo or the ”Home” link in the top ribbon to access the home page</h1>
+                <img id="helpimg" src="help/help2.png">
+                <h1 id="helptext">Click the links in the ribbon to access the other administrative pages</h1>
+                <img id="helpimg" src="help/help3.png">
+                <h1 id="helptext">Click the arrow buttons or press the horizontal arrow keys to move along the guide path</h1>
+                <img id="helpimg" src="help/help4.png">
+                <h1 id="helptext">Click links in the text to jump to their pages</h1>
+                <img id="helpimg" src="help/help5.png">
+                <h1 id="helptext">Click links in the text to jump to their pages</h1>
+                <img id="helpimg" src="help/help6.png">
+                <h1 id="helptext">Use the search bar at the right side of the ribbon to search among the page titles</h1>
+                <img id="helpimg" src="help/help7.png">
+                <h1 id="helptext">Use the vertical arrow keys on your keyboard to cycle between images and maps</h1>
+                <img id="helpimg" src="help/help8.png">
+                <h1 id="helptext">Click the ”Back to Guide Path” link if you have veered off and wish to return</h1>
+                <img id="helpimg" src="help/help9.png">
+                <h1 id="helptext">The Guide Path is a set of selected pages that you can move along and gain a basic understanding of the topic. You can veer off the path to explore interesting branches by clicking the blue links in the text or using the search bar</h1>
+            </div>
+
+
             <hr>
             <h1 id="romanisation" style="font-size: 40px; font-family: Georgia; padding-left: 3vw; padding-top:2vh">On Romanisation</h1>
-            <p style="font-size: 20px; font-family: Georgia; padding-left: 5vw; padding-right: 7vw; padding-top:1vh; text-align: justify">As this site mainly concerns itself with the political development of a region whose people do not use an alphabet to record their language, it is necessary to transcribe it to eliminate the language barrier. Since there is no definitive method of transcription, on most occasions I have used the versions most common in the literature, with the traditional Chinese text and its Pinyin transcription in parentheses. The same is applied for several translated phrases.</p>
+            <p style="font-size: 30px; font-family: Georgia; padding-left: 5vw; padding-right: 7vw; padding-top:1vh; text-align: justify">As this site mainly concerns itself with the political development of a region whose people do not use an alphabet to record their language, it is necessary to transcribe it to eliminate the language barrier. Since there is no definitive method of transcription, on most occasions I have used the versions most common in the literature, with the traditional Chinese text and its Pinyin transcription in parentheses. The same is applied for several translated phrases.</p>
             <br><br>
         </div>
     </body>

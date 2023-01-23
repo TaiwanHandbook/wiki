@@ -1,19 +1,37 @@
 function refreshTheme(){
-    if ((sessionStorage.getItem("theme") == "light")) {
-        document.getElementById('colMode').setAttribute('href', 'styleLight.css')
-        document.getElementById('colModePage').setAttribute('href', '../styleLight.css')}
-    else if ((sessionStorage.getItem("theme") == "dark")){
-        document.getElementById('colMode').setAttribute('href', 'styleDark.css')
-        document.getElementById('colModePage').setAttribute('href', '../styleDark.css')}
-    else if ((sessionStorage.getItem("theme") == "beige")){
-        document.getElementById('colMode').setAttribute('href', 'styleBeige.css')
-        document.getElementById('colModePage').setAttribute('href', '../styleBeige.css')}
-}
+    if (window.location.pathname.split("/").includes("pages")){
+        if ((sessionStorage.getItem("theme") == "light")) {
+            document.getElementById('colMode').setAttribute('href', '../styleLight.css')}
+        else if ((sessionStorage.getItem("theme") == "dark")){
+            document.getElementById('colMode').setAttribute('href', '../styleDark.css')}
+        else if ((sessionStorage.getItem("theme") == "beige")){
+            document.getElementById('colMode').setAttribute('href', '../styleBeige.css')}
+    } 
+    else {
+        if ((sessionStorage.getItem("theme") == "light")) {
+            document.getElementById('colMode').setAttribute('href', 'styleLight.css')}
+        else if ((sessionStorage.getItem("theme") == "dark")){
+            document.getElementById('colMode').setAttribute('href', 'styleDark.css')}
+        else if ((sessionStorage.getItem("theme") == "beige")){
+            document.getElementById('colMode').setAttribute('href', 'styleBeige.css')
+    }
+}}
 // (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)
 
 function setNewTheme(newTheme){
     sessionStorage.setItem("theme", newTheme)
+    if (window.location.pathname.split("/").pop().split(".")[0] == "settings"){
+        if ((sessionStorage.getItem("theme") == "dark")){document.getElementById('homeImg').setAttribute('src', 'pages/images/homeDark.png')} else {document.getElementById('homeImg').setAttribute('src', 'pages/images/home.png')}}
     refreshTheme()}
+
+if (sessionStorage.getItem("theme") == null){
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches){
+        sessionStorage.setItem("theme", "light")
+    }
+    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+        sessionStorage.setItem("theme", "dark")
+}}
+refreshTheme();
 
 function guidePagesSetup(){
     const pages = "Treaty_of_Shimonoseki,Empire_of_Japan,Retrocession,2-28_Incident,Nationalist_retreat,White_Terror,Economic_Stabilisation_Board,Kaohsiung_EPZ,Ten_Major_Construction_Projects,Industrial_Technology_Research_Institute,UN_General_Assembly_Resolution_2758,Shanghai_Communique,Jimmy_Carter,Tangwai,Kaohsiung_Incident,Founding_of_the_DPP,Lifting_of_martial_law,Lee_Teng-hui,2000_presidential_election,Chen_Shui-bian,March_19_shooting,Ma_Ying-jeou,2016_general_election"
@@ -78,7 +96,6 @@ function init(onPath){
 // ------------------------------ //
 
 
-refreshTheme();
 window.onload = function onload() {
     
 
