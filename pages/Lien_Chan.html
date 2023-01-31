@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Lien Chan</title>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" id="colMode" href="../styleLight.css">
+        <script src="../js/theme.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            var images = [""]
+            var credits = [""]
+            var map = false
+        </script>
+        <script src="../js/image.js"></script>
+        
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
+    
+    <body>
+        <div id="homeFlex">
+            <div id="homeFlex1">
+                <a href="../index.html"><img src="images/home.png" id="homeImg" loading="lazy"></a>
+                <a id="homeLink" href="../index.html">Home</a>
+                <a id="homeLink" href="../about.html">About</a>
+                <a id="homeLink" href="../all.html">Glossary</a>
+                <a id="homeLink" href="../bibliography.html">Bibliography</a>
+                <a id="homeLink" href="../feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="../help.html">Help</a>
+                <a id="homeLinkPath" href="../redirect2.html" style="display: none;">Back to Guide Path</a>
+                <a id="homeLink" href="../settings.html"><span class="fa fa-gear"></span></a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="../redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
+                </div>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="../js/searchbar.js"></script>
+        </div>
+        <script>if ((sessionStorage.getItem("theme") == "dark")){document.getElementById('homeImg').setAttribute('src', 'images/homeDark.png')} else {document.getElementById('homeImg').setAttribute('src', 'images/home.png')}</script>
+        <div id="infodiv">
+            <div id="FlexCont">
+                <div id="FlexText">
+                    <div id="FlexContText">
+                        <h1 id="textTitle">Lien Chan</h1>
+                        <p><b>Lien Chan</b> (Chinese: 連戰; Pinyin: Lián Zhàn; born 1936) is a Mainlander-born <a href="#" onclick="redir('Kuomintang')">KMT</a> politician who served as vice-president during the last term of <a href="#" onclick="redir('Lee_Teng-hui')">Lee Teng-hui</a> between 1996 and 2000.</p>
+                        <p>President Lee had named Chan his successor, helping him become KMT party chair and presidential nominee in the <a href="#" onclick="redir('2000_presidential_election')">2000</a> and 2004 <a href="#" onclick="redir('2000_presidential_election')">presidential elections</a>, both of which he lost to <a href="#" onclick="redir('Chen_Shui-bian')">Chen Shui-bian</a>. This was largely due to him and his <a href="#" onclick="redir('Pan-Blue_coalition')">pan-Blue</a> rival <a href="#" onclick="redir('James_Soong')">James Soong</a> not being able to resolve their disagreements and damaging each other's images.</p>
+                        <p>In 2005, following his chains of losses he travelled to Beijing to meet with <a href="#" onclick="redir('People%27s_Republic_of_China')">PRC</a> leaders, including President Hu Jintao. This eight-day visit marked the first KMT leader setting foot on the Mainland since the <a href="#" onclick="redir('Nationalist_retreat')">end of the civil war</a>. There he gave a speech in which called for democratisation in the PRC, as well as negotiating a joint communiqué building on the <a href="#" onclick="redir('1992_Consensus')">1992 Consensus</a> that was to become the foundation of the <a>Economic Cooperation Framework Agreement</a> during the term of President <a href="#" onclick="redir('Ma_Ying-jeou')">Ma Ying-jeou</a>.</p>
+                        <br><hr>
+                        <!--<h2 id="textRelated">Related links</h2>
+                        <ul>
+                            <li><a href="#" onclick="redir('')"></a></li>
+                        </ul>
+                        <br><hr>-->
+                        <h2 id="textRefs">Related links</h2>
+                        <ol id="textRefsList">
+                            <li id="">Rigger, S. (2011). Making Peace with the China Inside and the China Outside In: Why Taiwan Matters. Rowman & Littlefield Publishers.</li>
+                            <li id="">Metzler, J.J. (2017). Taiwan (The Republic of China) 2000-2008. In: Taiwan’s Transformation: 1895 to the Present. Palgrave Macmillan.</li>
+
+                        </ol>
+                    </div>
+                </div>
+                <!--IMAGE HERE--><div id="FlexImage" style="background-image: url(images);">
+                    <span id="caption"><!-- IMAGE CAPTION --></span>
+                </div>
+                <!-- MAP HERE <iframe src="" id="map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            </div>
+        </div>
+        <div id="progressFlex" style="display: none;">
+            <button id="progressButton" onclick="prevPage()">◄</button>
+            <div id="progressbar"><div id="progress"><span id="progressSpan">42 / 100</span></div></div>
+            <button id="progressButton" onclick="nextPage()">►</button>
+        </div>
+		<script src="../js/keys.js"></script>
+    </body>
+
+</html>
