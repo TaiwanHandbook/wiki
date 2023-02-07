@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Kang Ning-hsiang</title>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" id="colMode" href="../styleLight.css">
+        <script src="../js/theme.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            var images = ["Kang_Ning-hsiang.jpg"]
+            var credits = ["Portrait of Kang Ning-hsiang, 1999, Control Yuan"]
+            var map = false
+        </script>
+        <script src="../js/image.js"></script>
+        
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
+    
+    <body>
+        <div id="homeFlex">
+            <div id="homeFlex1">
+                <a href="../index.html"><img src="images/home.png" id="homeImg" loading="lazy"></a>
+                <a id="homeLink" href="../index.html">Home</a>
+                <a id="homeLink" href="../about.html">About</a>
+                <a id="homeLink" href="../all.html">Glossary</a>
+                <a id="homeLink" href="../bibliography.html">Bibliography</a>
+                <a id="homeLink" href="../feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="../help.html">Help</a>
+                <a id="homeLinkPath" href="../redirect2.html" style="display: none;">Back to Guide Path</a>
+                <a id="homeLink" href="../settings.html"><span class="fa fa-gear"></span></a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="../redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
+                </div>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="../js/searchbar.js"></script>
+        </div>
+        <script>if ((sessionStorage.getItem("theme") == "dark")){document.getElementById('homeImg').setAttribute('src', 'images/homeDark.png')} else {document.getElementById('homeImg').setAttribute('src', 'images/home.png')}</script>
+        <div id="infodiv">
+            <div id="FlexCont">
+                <div id="FlexText">
+                    <div id="FlexContText">
+                        <h1 id="textTitle">Kang Ning-hsiang</h1>
+                        <p><b>Kang Ning-hsiang</b> (Chinese: 康寧祥; Pinyin: Kāng Níngxiáng; born 1938) is a Taiwanese politician and a key figure in the early opposition movement, the <a href="#" onclick="redir('Tangwai')">Tangwai movement</a>, as well as the <a href="#" onclick="redir('Founding_of_the_DPP')">establishment of the Democratic Progressive Party</a>.</p>
+                        <p>He was the head of <a href="#" onclick="redir('The_Eighties')">the Eighties faction</a> whithin the opposition, the supporters of which advocated for more moderate means of reforming the Taiwanese political landscape. This involved reform through the ballot-box, trojan horse strategies, and what kang referred to as "political kung fu", which involved overpowering the opponent while continuing to work within the bounds of the system.</p>
+                        <p>On several occasions he actively cooperated with President <a href="#" onclick="redir('Chiang_Ching-kuo')">Chiang Ching-kuo</a> and the reformist wing of the <a href="#" onclick="redir('Kuomintang')">KMT</a>, which, while earning him harsh criticism from his more radical Tangwai colleagues, causing disunity within the movement, also helped the Chiang administration gain the trust of the opposition movement enough to carry on with the liberalising reforms and eventually <a href="#" onclick="redir('Lifting_of_martial_law')">abrogate martial law</a>.</p>
+                        <br><hr>
+                        <h2 id="textRelated">Related links</h2>
+                        <ul>
+                            <li><a href="#" onclick="redir('Chiang_Ching-kuo')">Chiang Ching-kuo</a></li>
+                            <li><a href="#" onclick="redir('Democratic_Progressive_Party')">Democratic Progressive Party</a></li>
+                            <li><a href="#" onclick="redir('Founding_of_the_DPP')">Founding of the DPP</a></li>
+                            <li><a href="#" onclick="redir('Kuomintang')">Kuomintang</a></li>
+                            <li><a href="#" onclick="redir('Tangwai')">Tangwai</a></li>
+                            <li><a href="#" onclick="redir('The_Eighties')">The Eighties</a></li>
+                        </ul>
+                        <br><hr>
+                        <h2 id="textRefs">Related links</h2>
+                        <ol id="textRefsList">
+                            <li id="">Fulda, A. (2020). Taiwan's Election-Driven Democratisation. In: The Struggle for Democracy in Mainland China, Taiwan and Hong Kong. Routledge.</li>
+                            <li id="">Rigger, S. (2011). From "Free China" to Democratic Taiwan. In: Why Taiwan Matters. Rowman & Littlefield Publishers.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="FlexImage" style="background-image: url(images/Kang_Ning-hsiang.jpg);">
+                    <span id="caption">Portrait of Kang Ning-hsiang, 1999, Control Yuan</span>
+                </div>
+                <!-- MAP HERE <iframe src="" id="map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            </div>
+        </div>
+        <div id="progressFlex" style="display: none;">
+            <button id="progressButton" onclick="prevPage()">◄</button>
+            <div id="progressbar"><div id="progress"><span id="progressSpan">42 / 100</span></div></div>
+            <button id="progressButton" onclick="nextPage()">►</button>
+        </div>
+		<script src="../js/keys.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <title>People First Party</title>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" id="colMode" href="../styleLight.css">
+        <script src="../js/theme.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            var images = ["People_First_Party.jpg"]
+            var credits = ["Flag of the People First Party, 2009, PFP"]
+            var map = false
+        </script>
+        <script src="../js/image.js"></script>
+        
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
+    
+    <body>
+        <div id="homeFlex">
+            <div id="homeFlex1">
+                <a href="../index.html"><img src="images/home.png" id="homeImg" loading="lazy"></a>
+                <a id="homeLink" href="../index.html">Home</a>
+                <a id="homeLink" href="../about.html">About</a>
+                <a id="homeLink" href="../all.html">Glossary</a>
+                <a id="homeLink" href="../bibliography.html">Bibliography</a>
+                <a id="homeLink" href="../feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="../help.html">Help</a>
+                <a id="homeLinkPath" href="../redirect2.html" style="display: none;">Back to Guide Path</a>
+                <a id="homeLink" href="../settings.html"><span class="fa fa-gear"></span></a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="../redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
+                </div>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="../js/searchbar.js"></script>
+        </div>
+        <script>if ((sessionStorage.getItem("theme") == "dark")){document.getElementById('homeImg').setAttribute('src', 'images/homeDark.png')} else {document.getElementById('homeImg').setAttribute('src', 'images/home.png')}</script>
+        <div id="infodiv">
+            <div id="FlexCont">
+                <div id="FlexText">
+                    <div id="FlexContText">
+                        <h1 id="textTitle">People First Party</h1>
+                        <p>The <b>People First Party</b> was founded in 2000 by James Soong and his loyalists who had recently split off from the KMT due to internal disagreements. These quarrels continued after the schism in the form of corruption accusations, tarnishing the image of both parties.</p>
+                        <p>The party can be classified as being in the <a href="#" onclick="redir('Pan-Blue_coalition')">pan-Blue coalition</a>, as it advocates for closer economic ties and eventual reunification with <a href="#" onclick="redir('People%27s_Republic_of_China')">Mainland China</a>.</p>
+                        <br><hr>
+                        <h2 id="textRelated">Related links</h2>
+                        <ul>
+                            <li><a href="#" onclick="redir('2000_presidential_election')">2000 presidential election</a></li>
+                            <li><a href="#" onclick="redir('James_Soong')">James Soong</a></li>
+                            <li><a href="#" onclick="redir('Kuomintang')">Kuomintang</a></li>
+                            <li><a href="#" onclick="redir('Pan-Blue_coalition')">Pan-Blue coalition</a></li>
+                        </ul>
+                        <br><hr>
+                        <h2 id="textRefs">Related links</h2>
+                        <ol id="textRefsList">
+                            <li id="">Metzler, J.J. (2017). Taiwan (The Republic of China) 2000-2008. In: Taiwan’s Transformation: 1895 to the Present. Palgrave Macmillan.</li>
+                            <li id="">Clark, C (2007). Taiwan Enters Troubled Waters: The Elective Presidencies of Lee Teng-hui and Chen Shui-bian. In: Taiwan: A New History. Routledge.</li>
+                            <li id="">Fulda, A. (2020). Taiwan's Election-Driven Democratisation. In: The Struggle for Democracy in Mainland China, Taiwan and Hong Kong. Routledge.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="FlexImage" style="background-image: url(images/People_First_Party.jpg);">
+                    <span id="caption">Flag of the People First Party, 2009, PFP</span>
+                </div>
+                <!-- MAP HERE <iframe src="" id="map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            </div>
+        </div>
+        <div id="progressFlex" style="display: none;">
+            <button id="progressButton" onclick="prevPage()">◄</button>
+            <div id="progressbar"><div id="progress"><span id="progressSpan">42 / 100</span></div></div>
+            <button id="progressButton" onclick="nextPage()">►</button>
+        </div>
+		<script src="../js/keys.js"></script>
+    </body>
+
+</html>

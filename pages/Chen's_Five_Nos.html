@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Chen's Five Nos</title>
+        <link rel="icon" href="images/icon.png">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" id="colMode" href="../styleLight.css">
+        <script src="../js/theme.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <script>
+            var images = [""]
+            var credits = [""]
+            var map = false
+        </script>
+        <script src="../js/image.js"></script>
+        
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPSHZS2ENV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HPSHZS2ENV');
+    </script>
+    
+    <body>
+        <div id="homeFlex">
+            <div id="homeFlex1">
+                <a href="../index.html"><img src="images/home.png" id="homeImg" loading="lazy"></a>
+                <a id="homeLink" href="../index.html">Home</a>
+                <a id="homeLink" href="../about.html">About</a>
+                <a id="homeLink" href="../all.html">Glossary</a>
+                <a id="homeLink" href="../bibliography.html">Bibliography</a>
+                <a id="homeLink" href="../feedback.html" target="_blank">Feedback</a>
+                <a id="homeLink" href="../help.html">Help</a>
+                <a id="homeLinkPath" href="../redirect2.html" style="display: none;">Back to Guide Path</a>
+                <a id="homeLink" href="../settings.html"><span class="fa fa-gear"></span></a>
+            </div>
+            <form id="homeFlex2" autocomplete="off" action="../redirect.html">
+                <div class="autocomplete">
+                    <input id="SearchInput" type="text" name="page" placeholder="Page name..." style="font-family: Georgia;">
+                </div>
+                <button type="submit" id="searchButton" onclick="redir('#')"><i class="fa fa-search"></i></button>
+            </form>
+            <script src="../js/searchbar.js"></script>
+        </div>
+        <script>if ((sessionStorage.getItem("theme") == "dark")){document.getElementById('homeImg').setAttribute('src', 'images/homeDark.png')} else {document.getElementById('homeImg').setAttribute('src', 'images/home.png')}</script>
+        <div id="infodiv">
+            <div id="FlexCont">
+                <div id="FlexText">
+                    <div id="FlexContText">
+                        <h1 id="textTitle">Chen's Five Nos</h1>
+                        <p>The <b>Five Nos</b> were a set of five principles <a href="#" onclick="redir('Chen_Shui-bian')">Chen Shui-bian</a> swore to adhere to in his inaugural speach. These included:</p>
+                        <ul>
+                            <li>No declaration of independence,</li>
+                            <li>No change to the <a href="#" onclick="redir('Republic_of_China')">ROC's</a> official name,</li>
+                            <li>No referendum on the political status of Taiwan,</li>
+                            <li>No reference to "state-to-state relations" in the Constitution.</li>
+                            <li>No abolition of the National Unification Council.</li>
+                        </ul>
+                        <br><hr>
+                        <h2 id="textRelated">Related links</h2>
+                        <ul>
+                            <li><a href="#" onclick="redir('Chen_Shui-bian')">Chen Shui-bian</a></li>
+                        </ul>
+                        <br><hr>
+                        <h2 id="textRefs">Related links</h2>
+                        <ol id="textRefsList">
+                            <li id="">Rigger, S. (2011). Making Peace with the China Inside and the China Outside In: Why Taiwan Matters. Rowman & Littlefield Publishers.</li>
+                        </ol>
+                    </div>
+                </div>
+                <!--IMAGE HERE--><div id="FlexImage" style="background-image: url(images);">
+                    <span id="caption"><!-- IMAGE CAPTION --></span>
+                </div>
+                <!-- MAP HERE <iframe src="" id="map" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            </div>
+        </div>
+        <div id="progressFlex" style="display: none;">
+            <button id="progressButton" onclick="prevPage()">◄</button>
+            <div id="progressbar"><div id="progress"><span id="progressSpan">42 / 100</span></div></div>
+            <button id="progressButton" onclick="nextPage()">►</button>
+        </div>
+		<script src="../js/keys.js"></script>
+    </body>
+
+</html>
