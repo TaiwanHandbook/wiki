@@ -25,12 +25,8 @@ function setNewTheme(newTheme){
     refreshTheme()}
 
 if (sessionStorage.getItem("theme") == null){
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches){
         sessionStorage.setItem("theme", "light")
-    }
-    else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
-        sessionStorage.setItem("theme", "dark")
-}}
+}
 refreshTheme();
 
 function guidePagesSetup(){
