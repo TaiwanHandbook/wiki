@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+            const arrive = new Date(2024, 1, 22, 7, 48)
+            var intervalId = window.setInterval(function(){
+                var seconds = Math.floor((arrive - Date.now()) / 1000)
+                var minutes = Math.floor(seconds/60)
+                var hours = Math.floor(minutes/60)
+                var days = Math.floor(hours/24)
+                document.getElementById("clock").textContent = (String(days) + " nap, " + String(hours%24) + " óra, " + String(minutes%60) + " perc, és " + String(seconds%60) + " másodperc!")
+              }, 1000);
+        </script>
+
+        <style>
+            html, body {
+                height: 100%;
+            }
+            
+            html {
+                display: table;
+                margin: auto;
+            }
+            
+            body {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            
+            #clock{
+                font-size: 5vw;
+            }
+        </style>
+    </head>
+    <body>
+        <p style="font-size: 2vw;">Találkozásunk pillanatáig hátra van: </p>
+        <p id="clock">Calculating...</p>
+    </body>
+</html>
