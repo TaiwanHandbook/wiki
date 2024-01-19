@@ -1,19 +1,11 @@
 <html>
     <head>
-        <script>
-            const arrive = new Date(2024, 1, 22, 7, 48)
-            var intervalId = window.setInterval(function(){
-                var seconds = Math.floor((arrive - Date.now()) / 1000)
-                var minutes = Math.floor(seconds/60)
-                var hours = Math.floor(minutes/60)
-                var days = Math.floor(hours/24)
-                document.getElementById("clock").textContent = (String(days) + " nap, " + String(hours%24) + " óra, " + String(minutes%60) + " perc, és " + String(seconds%60) + " másodperc!")
-              }, 1000);
-        </script>
-
+        <title>Nagyon hiányzol!</title>
+        <link rel="icon" href="1.png">
         <style>
             html, body {
-                height: 100%;
+                height: 100vh;
+                margin: 0;
             }
             
             html {
@@ -22,17 +14,89 @@
             }
             
             body {
-                display: table-cell;
-                vertical-align: middle;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                flex-direction: column;
             }
             
             #clock{
                 font-size: 5vw;
             }
+            #progress{
+                height: 7vh;
+                width: 85vw;
+                background-color: gray;
+            }
+            #bar{
+                height: 100%;
+                width: 30%;
+                background-color: lightskyblue;
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                flex-direction: column;
+                font-size: 1.8vw;
+            }
         </style>
     </head>
     <body>
-        <p style="font-size: 2vw;">Találkozásunk pillanatáig hátra van: </p>
+        <p style="font-size: 2.5vw;">Találkozásunk pillanatáig hátra van: </p>
         <p id="clock">Calculating...</p>
+        <div id="progress">
+            <div id="bar">Calculating...</div>
+        </div>
+        
+        <script>
+            const leave = new Date(2024, 0, 12, 18, 48)
+            const arrive = new Date(2024, 1, 22, 7, 48)
+            const titletype = Math.floor(Math.random()*5)
+            const icontype = Math.floor(Math.random()*9)
+
+            function refresh(){
+                var seconds = Math.floor((arrive - Date.now()) / 1000)
+                var minutes = Math.floor(seconds/60)
+                var hours = Math.floor(minutes/60)
+                var days = Math.floor(hours/24)
+                document.getElementById("clock").textContent = (String(days) + " nap, " + String(hours%24) + " óra, " + String(minutes%60) + " perc, és " + String(seconds%60) + " másodperc!")
+                if(titletype == 0){
+                    document.title = "Még " + seconds + " mp"
+                }
+            }
+            refresh()
+            document.getElementById("bar").style.width = String(Math.floor((1-(arrive - Date.now())/(arrive-leave))*100))+"%"
+            document.getElementById("bar").textContent = String(Math.floor((1-(arrive - Date.now())/(arrive-leave))*100))+"%"
+
+            switch(titletype){
+                case 0:
+                    document.title = "Még " + String(Math.floor((arrive - Date.now()) / 1000)) + " mp"
+                    break;
+
+                case 1:
+                    document.title = "Nagyon hiányzol!"
+                    break;
+
+                case 2:
+                    document.title = "Vár egy nagy ölelés!"
+                    break;
+
+                case 3:
+                    document.title = "Szeretlek!"
+                    break;
+
+                case 4:
+                    document.title = "Számíts sok csókra!"
+                    break;
+            }
+            document.querySelector("link[rel~='icon']").href = String(icontype)+".png";
+
+            var intervalId = window.setInterval(function(){
+                refresh()
+            }, 1000);
+        </script>
     </body>
 </html>
