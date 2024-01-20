@@ -6,6 +6,7 @@
             html, body {
                 height: 100vh;
                 margin: 0;
+                max-height: 100%;
             }
             
             html {
@@ -20,33 +21,167 @@
                 align-items: center;
                 align-content: center;
                 flex-direction: column;
+                overflow: hidden;
             }
             
-            #clock{
-                font-size: 5vw;
+            @media (orientation: landscape){
+                #clockface{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    flex-direction: column;
+                    overflow: hidden;
+                    width: 50%;
+                }
+                #clockrow{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    align-content: center;
+                    flex-direction: row;
+                    overflow: hidden;
+                    width: 100%;
+                    font-size: 5.5vw;
+                }
+                #clock_units{
+                    font-size: 2vw;
+                    width: 40%
+                }
+                #clock_days{
+                    width: 40%;
+                    text-align: right;
+                }
+                #clock_hours{
+                    width: 40%;
+                    text-align: right;
+                }
+                #clock_mins{
+                    width: 40%;
+                    text-align: right;
+                }
+                #clock_secs{
+                    width: 40%;
+                    text-align: right;
+                }
+    
+                #progress{
+                    height: 5vw;
+                    width: 85vw;
+                    background-color: gray;
+                }
+                #bar{
+                    height: 100%;
+                    width: 30%;
+                    background-color: lightskyblue;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    flex-direction: column;
+                    font-size: 2vw;
+                }
+                #toptext{
+                    font-size: 2.5vw;
+                }
             }
-            #progress{
-                height: 7vh;
-                width: 85vw;
-                background-color: gray;
+
+            @media (orientation: portrait){
+                #clockface{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    flex-direction: column;
+                    overflow: hidden;
+                    width: 100%;
+                    margin-top: 50px;
+                    margin-bottom: 50px;
+                }
+                #clockrow{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    align-content: center;
+                    flex-direction: row;
+                    overflow: hidden;
+                    width: 100%;
+                    font-size: 10vh;
+                }
+                #clock_units{
+                    font-size: 7vw;
+                    width: 40%
+                }
+                #clock_days{
+                    width: 40%;
+                    text-align: right;
+                }
+                #clock_hours{
+                    width: 40%;
+                    text-align: right;
+                }
+                #clock_mins{
+                    width: 40%;
+                    text-align: right;
+                }
+                #clock_secs{
+                    width: 40%;
+                    text-align: right;
+                }
+    
+                #progress{
+                    height: 20vw;
+                    width: 85vw;
+                    background-color: gray;
+                }
+                #bar{
+                    height: 100%;
+                    width: 30%;
+                    background-color: lightskyblue;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                    flex-direction: column;
+                    font-size: 80px;
+                }
+                #toptext{
+                    font-size: 50px;
+                }
             }
-            #bar{
-                height: 100%;
-                width: 30%;
-                background-color: lightskyblue;
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: center;
-                align-items: center;
-                align-content: center;
-                flex-direction: column;
-                font-size: 1.8vw;
-            }
+            
         </style>
     </head>
     <body>
-        <p style="font-size: 2.5vw;">Találkozásunk pillanatáig hátra van: </p>
-        <p id="clock">Calculating...</p>
+        <div id="toptext">Találkozásunk pillanatáig hátra van: </div><br>
+        
+        <div id="clockface">
+            <div id="clockrow">
+                <div id="clock_days">XX</div>
+                <div id="clock_units"> nap,</div>
+            </div>
+            <div id="clockrow">
+                <div id="clock_hours">XX</div>
+                <div id="clock_units"> óra,</div>
+            </div>
+            <div id="clockrow">
+                <div id="clock_mins">XX</div>
+                <div id="clock_units"> perc,</div>
+            </div>
+            <div id="clockrow">
+                <div id="clock_secs">XX</div>
+                <div id="clock_units"> másodperc,</div>
+            </div>
+        </div>
+        
+        <!--<p id="clock">Calculating...</p>-->
+        <br>
         <div id="progress">
             <div id="bar">Calculating...</div>
         </div>
@@ -54,7 +189,7 @@
         <script>
             const leave = new Date(2024, 0, 12, 18, 48)
             const arrive = new Date(2024, 1, 22, 7, 48)
-            const titletype = Math.floor(Math.random()*5)
+            const titletype = Math.floor(Math.random()*6)
             const icontype = Math.floor(Math.random()*9)
 
             function refresh(){
@@ -62,7 +197,12 @@
                 var minutes = Math.floor(seconds/60)
                 var hours = Math.floor(minutes/60)
                 var days = Math.floor(hours/24)
-                document.getElementById("clock").textContent = (String(days) + " nap, " + String(hours%24) + " óra, " + String(minutes%60) + " perc, és " + String(seconds%60) + " másodperc!")
+                //document.getElementById("clock").textContent = (String(days) + " nap, " + String(hours%24) + " óra, " + String(minutes%60) + " perc, és " + String(seconds%60) + " másodperc!")
+                document.getElementById("clock_days").textContent = String(days);
+                document.getElementById("clock_hours").textContent = String(hours%24);
+                document.getElementById("clock_mins").textContent = String(minutes%60);
+                document.getElementById("clock_secs").textContent = String(seconds%60);
+
                 if(titletype == 0){
                     document.title = "Még " + seconds + " mp"
                 }
@@ -90,6 +230,10 @@
 
                 case 4:
                     document.title = "Számíts sok csókra!"
+                    break;
+
+                case 5:
+                    document.title = "Már csak " + String(Math.floor(arrive.getTime()/1000/3600/24)-Math.floor(Date.now()/1000/3600/24)) + " alvás"
                     break;
             }
             document.querySelector("link[rel~='icon']").href = String(icontype)+".png";
